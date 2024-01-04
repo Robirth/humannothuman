@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import './styles.css'
-import App from './App'
+import './styles.module.css'
+import ThreeScene from './ThreeScene'
 
-createRoot(document.getElementById('root')).render(<App />)
+createRoot(document.getElementById('root')).render(<ThreeScene />)
