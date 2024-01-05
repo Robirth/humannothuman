@@ -1,3 +1,5 @@
+"use client";
+
 import {
   CameraControls,
   Dodecahedron,
@@ -7,6 +9,7 @@ import {
   RenderTexture,
   useGLTF,
 } from '@react-three/drei';
+
 import { useThree } from '@react-three/fiber';
 import { useAtom } from 'jotai';
 import { useControls } from 'leva';
