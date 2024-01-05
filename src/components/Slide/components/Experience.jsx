@@ -5,6 +5,9 @@ import {
     Grid,
     MeshDistortMaterial,
     RenderTexture,
+    useGLTF,
+
+
   } from "@react-three/drei";
   import { useThree } from "@react-three/fiber";
   import { useAtom } from "jotai";
@@ -12,11 +15,13 @@ import {
   import { useEffect, useRef } from "react";
   import { slideAtom } from "./Overlay";
   import { Scene } from "./Scene";
+ 
 
-  
+ 
+ 
   export const scenes = [
     {
-      path: "../models/cybertruck_scene.glb",
+      path: "../models/cybertruck_scene.gltf",
       mainColor: "#f9c0ff",
       name: "Cybertruck",
       description:
@@ -25,7 +30,7 @@ import {
       range: 660,
     },
     {
-      path: "../models/model3_scene.glb",
+      path: "../models/model3_scene.gltf",
       mainColor: "#c0ffe1",
       name: "Model 3",
       description: "The car of the future",
@@ -33,7 +38,7 @@ import {
       range: 576,
     },
     {
-      path: "../models/semi_scene.glb",
+      path: "../models/semi_scene.gltf",
       mainColor: "#ffdec0",
       name: "Semi",
       description: "The Future of Trucking",
@@ -41,6 +46,7 @@ import {
       range: 800,
     },
   ];
+  
   
   const CameraHandler = ({ slideDistance }) => {
     const viewport = useThree((state) => state.viewport);
