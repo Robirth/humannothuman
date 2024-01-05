@@ -1,27 +1,30 @@
 import {
-    CameraControls,
-    Dodecahedron,
-    Environment,
-    Grid,
-    MeshDistortMaterial,
-    RenderTexture,
-    useGLTF,
+  CameraControls,
+  Dodecahedron,
+  Environment,
+  Grid,
+  MeshDistortMaterial,
+  RenderTexture,
+  useGLTF,
+} from '@react-three/drei';
+import { useThree } from '@react-three/fiber';
+import { useAtom } from 'jotai';
+import { useControls } from 'leva';
+import { useEffect, useRef } from 'react';
+import { slideAtom } from './Overlay';
+import { Scene } from './Scene';
 
+// Preload GLTF models
+useGLTF.preload(
+  '/models/cybertruck_scene.glb',
+  '/models/model3_scene.glb',
+  '/models/semi_scene.glb'
 
-  } from "@react-three/drei";
-  import { useThree } from "@react-three/fiber";
-  import { useAtom } from "jotai";
-  import { useControls } from "leva";
-  import { useEffect, useRef } from "react";
-  import { slideAtom } from "./Overlay";
-  import { Scene } from "./Scene";
- 
+);
 
- 
- 
   export const scenes = [
     {
-      path: "../models/cybertruck_scene.gltf",
+      path: "/models/cybertruck_scene.glb",
       mainColor: "#f9c0ff",
       name: "Cybertruck",
       description:
@@ -30,7 +33,7 @@ import {
       range: 660,
     },
     {
-      path: "../models/model3_scene.gltf",
+      path: "/models/model3_scene.glb",
       mainColor: "#c0ffe1",
       name: "Model 3",
       description: "The car of the future",
@@ -38,7 +41,7 @@ import {
       range: 576,
     },
     {
-      path: "../models/semi_scene.gltf",
+      path: "/models/semi_scene.glb",
       mainColor: "#ffdec0",
       name: "Semi",
       description: "The Future of Trucking",
@@ -197,3 +200,47 @@ import {
       </>
     );
   };
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
