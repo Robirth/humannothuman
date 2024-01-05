@@ -16,15 +16,15 @@ import { Scene } from './Scene';
 
 // Preload GLTF models
 useGLTF.preload(
-  '/models/cybertruck_scene.glb',
-  '/models/model3_scene.glb',
-  '/models/semi_scene.glb'
+  '/models/robot/cybertruck_scene.glb',
+  '/models/robot/model3_scene.glb',
+  '/models/robot/semi_scene.glb'
 
 );
 
   export const scenes = [
     {
-      path: "/models/cybertruck_scene.glb",
+      path: "/models/robot/cybertruck_scene.glb",
       mainColor: "#f9c0ff",
       name: "Cybertruck",
       description:
@@ -33,7 +33,7 @@ useGLTF.preload(
       range: 660,
     },
     {
-      path: "/models/model3_scene.glb",
+      path: "/models/robot/model3_scene.glb",
       mainColor: "#c0ffe1",
       name: "Model 3",
       description: "The car of the future",
@@ -41,7 +41,7 @@ useGLTF.preload(
       range: 576,
     },
     {
-      path: "/models/semi_scene.glb",
+      path: "/models/robot/semi_scene.glb",
       mainColor: "#ffdec0",
       name: "Semi",
       description: "The Future of Trucking",
