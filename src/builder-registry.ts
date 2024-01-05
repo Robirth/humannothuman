@@ -1,10 +1,10 @@
 "use client";
-import { Builder } from "@builder.io/react";
+import { Builder, withChildren } from "@builder.io/react";
 import BotPage from "./components/Bots/BotPage";
 import Counter from "./components/Counter/Counter";
-import ThreeScene from "./components/ThreeScene/ThreeScene";
 import { Robot } from "./components/Robot";
-
+import Slide from "./components/Slide/Slide";
+import ThreeScene from "./components/ThreeScene/ThreeScene";
 
 Builder.registerComponent(Counter, {
   name: "Counter",
@@ -25,5 +25,9 @@ Builder.registerComponent(Robot, {
 });
 
 Builder.registerComponent(ThreeScene, {
- name: 'ThreeScene',
+  name: "ThreeScene",
+});
+
+Builder.registerComponent(withChildren(Slide), {
+  name: "Slide",
 });
