@@ -12,6 +12,7 @@ import {
   import { useEffect, useRef } from "react";
   import { slideAtom } from "./Overlay";
   import { Scene } from "./Scene";
+
   
   export const scenes = [
     {
