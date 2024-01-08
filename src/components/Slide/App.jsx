@@ -1,10 +1,9 @@
-"use client";
 import { Canvas } from "@react-three/fiber";
 import { Leva } from "leva";
 import { Experience } from "./components/Experience";
 import { Overlay } from "./components/Overlay";
 
-function Slide() {
+function App() {
   return (
     <>
       <Leva hidden />
@@ -17,4 +16,4 @@ function Slide() {
   );
 }
 
-export default Slide;
+export default App;
