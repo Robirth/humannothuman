@@ -9,11 +9,12 @@ import {
     Sphere,
     useGLTF,
   } from "@react-three/drei";
-  
+
   import * as THREE from "three";
   
   import React, { useEffect } from "react";
   import { DEG2RAD } from "three/src/math/MathUtils";
+  
   
   export const Scene = ({ mainColor, path, ...props }) => {
     const { nodes, materials, scene } = useGLTF(path);
