@@ -1,6 +1,6 @@
 "use client";
 import { Builder } from "@builder.io/react";
-import App from "./components/Slide/App";
+import Slide from "./components/Slide/Slide";
 import BotPage from "./components/Bots/BotPage";
 import Counter from "./components/Counter/Counter";
 import ThreeScene from "./components/ThreeScene/ThreeScene";
@@ -23,6 +23,6 @@ Builder.registerComponent(ThreeScene, {
   name: "ThreeScene",
 });
 
-Builder.registerComponent(App, {
-  name: "App",
+Builder.registerComponent(Slide, {
+  name: "Slide",
 });

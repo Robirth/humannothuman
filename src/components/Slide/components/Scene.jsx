@@ -10,7 +10,7 @@ import {
 } from "@react-three/drei";
 
 import * as THREE from "three";
-
+import '../styles.module.css';
 import React, { useEffect } from "react";
 import { DEG2RAD } from "three/src/math/MathUtils";
 

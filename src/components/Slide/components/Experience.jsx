@@ -12,7 +12,7 @@ import { useControls } from "leva";
 import { useEffect, useRef } from "react";
 import { slideAtom } from "./Overlay";
 import { Scene } from "./Scene";
-
+import '../styles.module.css';
 
 
 export const scenes = [

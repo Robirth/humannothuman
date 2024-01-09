@@ -1,7 +1,7 @@
 import { atom, useAtom } from "jotai";
 import { useEffect, useState } from "react";
 import { scenes } from "./Experience";
-
+import '../styles.module.css';
 export const slideAtom = atom(0);
 
 export const Overlay = () => {
