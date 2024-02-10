@@ -1,3 +1,8 @@
+@tailwind base;
+
+@tailwind base;
+
+@tailwind utilities;
 @import"https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,800;1,6..12,400&display=swap";*,:before,:after {
   box-sizing: border-box;
   border-width: 0;
@@ -100,6 +105,8 @@ button,select {
 
 button,[type=button],[type=reset],[type=submit] {
   -webkit-appearance: button;
+  appearance: button;
+
   background-color: transparent;
   background-image: none
 }
@@ -186,19 +193,13 @@ button,[role=button] {
 img,svg,video,canvas,audio,iframe,embed,object {
   display: block;
   width: 100vw;
-  height: 100vh
+  height: 100vh;
+  
   
  
 }
 
-img,video {
-  max-width: 100%;
-  height: auto
-}
 
-[hidden] {
-  display: none
-}
 
 *,:before,:after {
   --tw-border-spacing-x: 0;
@@ -513,10 +514,11 @@ img,video {
   height: 100vh
 }
 
-body {
-  margin: 0
-}
+
 
 .hover\:opacity-60:hover {
   opacity: .6
 }
+
+
+

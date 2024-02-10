@@ -1,11 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [".src/components/Slide/Slide.jsx", "./src/**/*.{js,ts,jsx,tsx}"],
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
-    fontFamily: {
-      sans: ["Nunito Sans", "sans-serif"],
-    },
     extend: {},
   },
   plugins: [],
-};
+}

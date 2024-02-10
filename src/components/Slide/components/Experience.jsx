@@ -18,7 +18,7 @@ export const scenes = [
   {
     path: "./models/robot/cybertruck_scene.glb",
     mainColor: "#f9c0ff",
-    name: "Cybertruck",
+    name: "HUMAN | NOTHUMAN",
     description:
       "Better utility than a truck with more performance than a sports car",
     price: 72000,

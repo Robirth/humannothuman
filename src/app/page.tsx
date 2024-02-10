@@ -1,114 +1,42 @@
-"use client";
-//THIS IS HOW YOU MAKE HOME PAGE WITH THREEJS IN NEXT
-import "../app/App.css"
-import {
-  RoundedBox,
-  ScrollControls,
-  Scroll,
-  Environment,
-  Sparkles,
-} from "@react-three/drei";
-import { useRef } from "react";
-import { useFrame,Canvas } from "@react-three/fiber";
-import { Robot } from "../components/Robot";
+import Image from 'next/image'
 
-//https://github.com/pmndrs/drei#shapes
-
-//CONVERT glbfile to jsx ONLINE HERE https://gltf.pmnd.rs/
-//NOT WITH gltf shit never fucking worked!!!
-
-function BotPage() {
+export default function Home() {
   return (
-    <Canvas>
-      <color attach="background" args={["#333333"]} />
-      <ambientLight intensity={0.2} />
-      <spotLight
-        position={[0, 25, 0]}
-        angle={1.3}
-        penumbra={1}
-        castShadow
-        intensity={2}
-        shadow-bias={-0.0001}
-      />
-      <Environment preset="warehouse" />
+    <div className="box-border flex relative flex-col shrink-0 w-full min-h-[20px] min-w-[20px]">
+      <div className="fixed">
+        {/* Desktop Video */}
+        <video
+          className="hidden md:block box-border object-cover fixed flex-col shrink-0 min-h-[20px] min-w-[20px] w-full h-full"
+          autoPlay={false}
+          muted={true}
+          controls={true}
+          playsInline={true}
+          loop={false}
+          src="https://cdn.builder.io/o/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F35892a6997a64b16a6422202b6b979c9%2Fcompressed?apiKey=cfdade1741a141b6a543d6f07cefe0a0&token=35892a6997a64b16a6422202b6b979c9&alt=media&optimized=true"
+        />
 
-      <ScrollControls pages={3} damping={0.1}>
-        {/* Canvas contents in here will *not* scroll, but receive useScroll! */}
-        <Robot scale={0.8} />
-        <Sparkles size={2} color={"#fff"} scale={[10, 10, 10]} />
+        {/* Mobile Video */}
+        <video
+          className="block md:hidden box-border object-cover fixed flex-col shrink-0 min-h-[20px] min-w-[20px] w-full h-full"
+          autoPlay={false}
+          muted={true}
+          controls={true}
+          playsInline={true}
+          loop={false}
+          src="https://cdn.builder.io/o/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F7be7e21fad2d44408c8e7594e1582dfe%2Fcompressed?apiKey=cfdade1741a141b6a543d6f07cefe0a0&token=7be7e21fad2d44408c8e7594e1582dfe&alt=media&optimized=true"
+        />
 
-        <Scroll>{/* Canvas contents in here will scroll along */}</Scroll>
-        <Scroll  html>
-        <div className="container">
-          <h1
-            className="title"
-            style={{
-              color: "#cdcbca",
-              position: "absolute",
-              top: `65vh`,
-              left: "50%",
-              fontSize: "13em",
-              transform: `translate(-50%,-50%)`,
-            }}
-          >
-            PHANTOM
-          </h1>
-
-          <div className="row" style={{ position: "absolute", top: `132vh` }}>
-            <h2>Be a Man of the Future.</h2>
-            <p style={{ maxWidth: "400px" }}>
-              Featuring a sleek, metallic design inspired by advanced
-              technology, this aftershave bottle is as stylish as it is
-              functional. But it's not just a pretty face - inside, you'll find
-              a nourishing and protective aftershave formula that will leave
-              your skin feeling refreshed and hydrated.
-            </p>
-            <button>Read more</button>
-          </div>
-
-          <div className="row" style={{ position: "absolute", top: `230vh` }}>
-            <div
-              className="col"
-              style={{ position: "absolute", right: `40px`, width: "540px" }}
-            >
-              <h2 style={{ maxWidth: "440px" }}>Tech-Savvy Side</h2>
-              <p style={{ maxWidth: "440px" }}>
-                Featuring a sleek, metallic design inspired by advanced
-                technology, this aftershave bottle is as stylish as it is
-                functional. But it's not just a pretty face - inside, you'll
-                find a nourishing and protective aftershave formula that will
-                leave your skin feeling refreshed and hydrated.
-              </p>
-              <button>Read more</button>
-            </div>
-          </div>
-
-          <h2
-            style={{
-              position: "absolute",
-              top: "350vh",
-              left: "50%",
-              transform: `translate(-50%,-50%)`,
-            }}
-          >
-            Cutting-Edge of Grooming
-          </h2>
-
-          <button
-            style={{
-              position: "absolute",
-              top: `590vh`,
-              left: "50%",
-              transform: `translate(50%,50%)`,
-            }}
-          >
-            Buy now
-          </button>
-       </div>
-        </Scroll>
-      </ScrollControls>
-    </Canvas>
+        {/* Placeholder */}
+        <div className="pt-72 w-full text-xs pointer-events-none" />
+      </div>
+    </div>
   );
 }
 
-export default BotPage;
+ 
+  
+
+
+
+
+
