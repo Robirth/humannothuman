@@ -8,7 +8,7 @@ export default function Home() {
         <video
           className="hidden md:block box-border object-cover fixed flex-col shrink-0 min-h-[20px] min-w-[20px] w-full h-full"
           autoPlay={false}
-          muted={true}
+          muted={false}
           controls={true}
           playsInline={true}
           loop={false}
@@ -19,7 +19,7 @@ export default function Home() {
         <video
           className="block md:hidden box-border object-cover fixed flex-col shrink-0 min-h-[20px] min-w-[20px] w-full h-full"
           autoPlay={false}
-          muted={true}
+          muted={false}
           controls={true}
           playsInline={true}
           loop={false}
