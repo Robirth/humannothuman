@@ -193,7 +193,7 @@ button,[role=button] {
 img,svg,video,canvas,audio,iframe,embed,object {
   display: block;
   width: 100vw;
-  height: 100vh;
+
   
   
  
