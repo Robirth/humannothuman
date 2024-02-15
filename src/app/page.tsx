@@ -8,7 +8,7 @@ export default function Home() {
         
 You could do something like
 
-<a href="/vid-two"> <img
+<a href="/vid-04"> <img
       loading="lazy"
       srcSet="https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F7b63df447f6d40519a6901550afe4a6d?width=100 100w, https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F7b63df447f6d40519a6901550afe4a6d?width=200 200w, https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F7b63df447f6d40519a6901550afe4a6d?width=400 400w, https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F7b63df447f6d40519a6901550afe4a6d?width=800 800w, https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F7b63df447f6d40519a6901550afe4a6d?width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F7b63df447f6d40519a6901550afe4a6d?width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F7b63df447f6d40519a6901550afe4a6d?width=2000 2000w, https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F7b63df447f6d40519a6901550afe4a6d"
       className="box-border object-cover overflow-hidden absolute shrink-0 w-full cursor-pointer pointer-events-auto aspect-[4.37] min-h-[20px] min-w-[20px] mt-[500px] z-[55]"
