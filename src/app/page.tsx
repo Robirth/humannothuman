@@ -6,7 +6,7 @@ export default function Home() {
    
     <div className="box-border flex relative flex-col shrink-0 w-full min-h-[20px] min-w-[20px]">
         
-You could do something like
+
 
 <a href="/about"> <img
       loading="lazy"
