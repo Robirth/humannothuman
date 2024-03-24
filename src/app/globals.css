@@ -189,10 +189,14 @@ button,[role=button] {
 :disabled {
   cursor: default
 }
-
-img,svg,video,canvas,audio,iframe,embed,object {
+canvas{
+  width:100vw;
+  height:100vh;
+}
+img,svg,video,audio,iframe,embed,object {
   display: block;
   width: 100vw;
+  
 
   
   
@@ -509,10 +513,7 @@ img,svg,video,canvas,audio,iframe,embed,object {
   transition-duration: 1s
 }
 
-#root {
-  width: 100vw;
-  height: 100vh
-}
+
 
 
 

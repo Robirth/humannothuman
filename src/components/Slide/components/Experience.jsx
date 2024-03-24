@@ -17,7 +17,7 @@ import { Scene } from "./Scene";
 export const scenes = [
   {
     path: "./models/robot/cybertruck_scene.glb",
-    mainColor: "#f9c0ff",
+    mainColor: "none",
     name: "HUMAN | NOTHUMAN",
     description:
       "Better utility than a truck with more performance than a sports car",
