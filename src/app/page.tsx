@@ -1,12 +1,10 @@
 import Image from 'next/image'
 import * as React from "react";
-import { Menu } from "@/components/Menu";
+import Menu from '../components/Menu/Menu';
 
-function MyComponent() {
-  return (
-    <Menu className="box-border flex absolute flex-col shrink-0 h-screen z-[77]" />
-  );
-}
+
+
+
 export default function Home() {
   return (
 
