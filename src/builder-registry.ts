@@ -7,6 +7,7 @@ import ThreeScene from "./components/ThreeScene/ThreeScene";
 import Menu from "./components/Menu/Menu";
 import NewMenu from "./components/NewMenu/NewMenu";
 
+
 Builder.registerComponent(Counter, {
   name: "Counter",
   inputs: [

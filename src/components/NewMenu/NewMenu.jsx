@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
+import { useGSAP } from '@gsap/react';
 import { gsap, Power2 } from 'gsap';
 import { CSSPlugin, CSSRulePlugin } from 'gsap/all';
 import './style.css';
@@ -7,9 +8,9 @@ import './style.css';
 gsap.registerPlugin(CSSPlugin, CSSRulePlugin);
 
 function NewMenu() {
-  useEffect(() => {
-    const tl = gsap.timeline({ paused: true });
+  const [tl] = useGSAP();
 
+  useEffect(() => {
     function initializeAnimation() {
       const path = document.querySelector('path');
       const hamburger = document.getElementById('hamburger');
@@ -20,9 +21,6 @@ function NewMenu() {
       }
 
       const spanBefore = CSSRulePlugin.getRule('#hamburger span:before');
-
-      console.log('Path element:', path);
-      console.log('Span before element:', spanBefore);
 
       gsap.set(spanBefore, { background: '#000' });
       gsap.set('.menu', { visibility: 'hidden' });
@@ -41,7 +39,7 @@ function NewMenu() {
         ease: 'power4.inOut',
       });
 
-      tl.to('#hamburger span', 1, { background: '#e2e2dc', ease: 'power2.inOut' }, '<');
+      tl.to("#hamburger span", 1, { background: '#e2e2dc', ease: 'power2.inOut' }, '<');
       tl.to(path, 0.8, { attr: { d: start }, ease: Power2.easeIn }, '<');
       tl.to(path, 0.8, { attr: { d: end }, ease: Power2.easeOut }, '-=0.5');
       tl.to('.menu', 1, { visibility: 'visible' }, '-=0.5');
@@ -80,7 +78,7 @@ function NewMenu() {
     return () => {
       tl.kill(); // Kill the GSAP timeline to prevent memory leaks
     };
-  }, []); // Empty dependency array ensures this effect runs only once after initial render
+  }, [tl]); // Dependency array ensures this effect runs only once after initial render
 
   return (
     <div>
