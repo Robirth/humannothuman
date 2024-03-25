@@ -1,7 +1,10 @@
 import React, { Fragment } from 'react';
 import "./style.css";
-import { gsap, Power2 } from "gsap";
-import { CSSRulePlugin } from "gsap/CSSRulePlugin";
+import { gsap } from "gsap";
+import { CSSPlugin, CSSRulePlugin } from "gsap/all";
+
+// Register plugins with GSAP
+gsap.registerPlugin(CSSPlugin, CSSRulePlugin);
 
 const tl = gsap.timeline({ paused: true });
 
