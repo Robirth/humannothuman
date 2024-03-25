@@ -1,6 +1,5 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import "./style.css";
-
 import { gsap, Power2 } from "gsap";
 import { CSSPlugin, CSSRulePlugin } from "gsap/all";
 
@@ -77,7 +76,7 @@ function NewMenu() {
   }
 
   // Initialize animation when component mounts
-  React.useEffect(() => {
+  useEffect(() => {
     initializeAnimation();
   }, []);
 
