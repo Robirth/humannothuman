@@ -1,76 +1,79 @@
-import "./style.css";
 import React, { Fragment, useEffect } from 'react';
-import { useGSAP } from "@gsap/react";
-import { gsap, Power2 } from "gsap";
-import { CSSPlugin, CSSRulePlugin } from "gsap/all";
-
+import { gsap, Power2 } from 'gsap';
+import { CSSPlugin, CSSRulePlugin } from 'gsap/all';
+import './style.css';
 
 // Register plugins with GSAP
 gsap.registerPlugin(CSSPlugin, CSSRulePlugin);
 
-const tl = gsap.timeline({ paused: true });
-
 function NewMenu() {
   useEffect(() => {
-    initializeAnimation();
-  }, []);
+    const tl = gsap.timeline({ paused: true });
 
-  function initializeAnimation() {
-    const path = document.querySelector("path");
-    const spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
+    function initializeAnimation() {
+      const path = document.querySelector('path');
+      const spanBefore = CSSRulePlugin.getRule('#hamburger span:before');
 
-    console.log("Path element:", path);
-    console.log("Span before element:", spanBefore);
+      console.log('Path element:', path);
+      console.log('Span before element:', spanBefore);
 
-    gsap.set(spanBefore, { background: "#000" });
-    gsap.set(".menu", { visibility: "hidden" });
+      gsap.set(spanBefore, { background: '#000' });
+      gsap.set('.menu', { visibility: 'hidden' });
 
-    revealMenu(path);
-  }
+      revealMenu(path);
+    }
 
-  function revealMenu(path) {
-    const start = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
-    const end = "M0,1005S175,995,500,995s500,5,500,5V0H0Z";
+    function revealMenu(path) {
+      const start = 'M0 502S175 272 500 272s500 230 500 230V0H0Z';
+      const end = 'M0,1005S175,995,500,995s500,5,500,5V0H0Z';
 
-    tl.to("#hamburger", 1.25, {
-      marginTop: "-5px",
-      x: -40,
-      y: 40,
-      ease: "power4.inOut",
-    });
-
-    tl.to("#hamburger span", 1, { background: "#e2e2dc", ease: "power2.inOut" }, "<");
-    tl.to(path, 0.8, { attr: { d: start }, ease: Power2.easeIn }, "<");
-    tl.to(path, 0.8, { attr: { d: end }, ease: Power2.easeOut }, "-=0.5");
-    tl.to(".menu", 1, { visibility: "visible" }, "-=0.5");
-
-    tl.to(
-      ".btn .btn-outline",
-      1.25,
-      {
+      tl.to('#hamburger', 1.25, {
+        marginTop: '-5px',
         x: -40,
         y: 40,
-        width: "140px",
-        height: "140px",
-        border: "1px solid #e2e2dc",
-        ease: "power4.inOut",
-      },
-      "<"
-    );
+        ease: 'power4.inOut',
+      });
 
-    tl.to(
-      ".menu-item > a",
-      1,
-      {
-        top: 0,
-        ease: "power3.out",
-        stagger: {
-          amount: 0.5,
+      tl.to('#hamburger span', 1, { background: '#e2e2dc', ease: 'power2.inOut' }, '<');
+      tl.to(path, 0.8, { attr: { d: start }, ease: Power2.easeIn }, '<');
+      tl.to(path, 0.8, { attr: { d: end }, ease: Power2.easeOut }, '-=0.5');
+      tl.to('.menu', 1, { visibility: 'visible' }, '-=0.5');
+
+      tl.to(
+        '.btn .btn-outline',
+        1.25,
+        {
+          x: -40,
+          y: 40,
+          width: '140px',
+          height: '140px',
+          border: '1px solid #e2e2dc',
+          ease: 'power4.inOut',
         },
-      },
-      "-=1"
-    ).reverse();
-  }
+        '<'
+      );
+
+      tl.to(
+        '.menu-item > a',
+        1,
+        {
+          top: 0,
+          ease: 'power3.out',
+          stagger: {
+            amount: 0.5,
+          },
+        },
+        '-=1'
+      ).reverse();
+    }
+
+    initializeAnimation();
+
+    // Clean up function to run when component unmounts
+    return () => {
+      tl.kill(); // Kill the GSAP timeline to prevent memory leaks
+    };
+  }, []); // Empty dependency array ensures this effect runs only once after initial render
 
   return (
     <div>
@@ -92,15 +95,21 @@ function NewMenu() {
           <div className="menu-container">
             <div className="wrapper">
               <div className="menu-item">
-                <a href="#"><span>I</span>Index</a>
+                <a href="#">
+                  <span>I</span>Index
+                </a>
                 <div className="menu-item-revealer"></div>
               </div>
               <div className="menu-item">
-                <a href="#"><span>II</span>Work</a>
+                <a href="#">
+                  <span>II</span>Work
+                </a>
                 <div className="menu-item-revealer"></div>
               </div>
               <div className="menu-item">
-                <a href="#"><span>III</span>About</a>
+                <a href="#">
+                  <span>III</span>About
+                </a>
                 <div className="menu-item-revealer"></div>
               </div>
             </div>
