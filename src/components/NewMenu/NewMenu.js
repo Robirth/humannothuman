@@ -1,46 +1,39 @@
 import React, { Fragment } from 'react';
 import "./style.css";
-import { gsap } from "gsap";
+import { gsap, Power2 } from "gsap";
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 
 const tl = gsap.timeline({ paused: true });
 
 function NewMenu() {
-  let path = document.querySelector("path");
-  var spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
+  let path; // Define path variable
+  let spanBefore; // Define spanBefore variable
 
-  gsap.set(spanBefore, { background: "#000" });
-  gsap.set(".menu", { visibility: "hidden" });
+  // Function to initialize animation
+  function initializeAnimation() {
+    path = document.querySelector("path");
+    spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
 
-  function revealMenu() {
-    revealMenuItems();
+    gsap.set(spanBefore, { background: "#000" });
+    gsap.set(".menu", { visibility: "hidden" });
 
-    const hamburger = document.getElementById("hamburger");
-    const toggleBtn = document.getElementById("toggle-btn");
-
-    toggleBtn.onclick = function (e) {
-      hamburger.classList.toggle("active");
-      tl.reversed(!tl.reversed());
-    };
+    revealMenu(); // Call revealMenu function
   }
 
-  revealMenu();
-
-  function revealMenuItems() {
+  // Function to reveal menu items
+  function revealMenu() {
     const start = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
     const end = "M0,1005S175,995,500,995s500,5,500,5V0H0Z";
-    const power4 = "power4.inOut";
-    const power2 = "power2.inOut";
 
     tl.to("#hamburger", 1.25, {
       marginTop: "-5px",
       x: -40,
       y: 40,
-      ease: power4,
+      ease: "power4.inOut",
     });
 
-    tl.to("#hamburger span", 1, { background: "#e2e2dc", ease: power2 }, "<");
-    tl.to(spanBefore, 1, { background: "#e2e2dc", ease: power2 }, "<");
+    tl.to("#hamburger span", 1, { background: "#e2e2dc", ease: "power2.inOut" }, "<");
+    tl.to(spanBefore, 1, { background: "#e2e2dc", ease: "power2.inOut" }, "<");
 
     tl.to(
       ".btn .btn-outline",
@@ -51,17 +44,17 @@ function NewMenu() {
         width: "140px",
         height: "140px",
         border: "1px solid #e2e2dc",
-        ease: power4,
+        ease: "power4.inOut",
       },
       "<"
     );
 
     tl.to(path, 0.8, { attr: { d: start }, ease: Power2.easeIn }, "<").to(
-        path,
-        0.8,
-        { attr: { d: end }, ease: Power2.easeOut },
-        "-=0.5" // Adjust the position in the timeline
-      );
+      path,
+      0.8,
+      { attr: { d: end }, ease: Power2.easeOut },
+      "-=0.5"
+    );
 
     tl.to(".menu", 1, { visibility: "visible" }, "-=0.5");
 
@@ -79,6 +72,12 @@ function NewMenu() {
     ).reverse();
   }
 
+  // Initialize animation when component mounts
+  React.useEffect(() => {
+    initializeAnimation();
+  }, []);
+
+  // Return JSX
   return (
     <div>
       <div>
@@ -87,7 +86,6 @@ function NewMenu() {
             <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
           </svg>
         </div>
-
         <Fragment>
           <div>
             {/* menu items */}
@@ -103,12 +101,10 @@ function NewMenu() {
                 <a href="#"><span>I</span>Index</a>
                 <div className="menu-item-revealer"></div>
               </div>
-
               <div className="menu-item">
                 <a href="#"><span>II</span>Work</a>
                 <div className="menu-item-revealer"></div>
               </div>
-
               <div className="menu-item">
                 <a href="#"><span>III</span>About</a>
                 <div className="menu-item-revealer"></div>
@@ -116,7 +112,6 @@ function NewMenu() {
             </div>
           </div>
         </div>
-
         <div className="secondary-menu">
           <div className="menu-container">
             <div className="wrapper">
@@ -124,18 +119,15 @@ function NewMenu() {
                 <a href="#">Speaker</a>
                 <div className="menu-item-revealer"></div>
               </div>
-
               <div className="menu-item">
                 <a href="#">Blog</a>
                 <div className="menu-item-revealer"></div>
               </div>
-
               <div className="menu-item">
                 <a href="#">Contact</a>
                 <div className="menu-item-revealer"></div>
               </div>
             </div>
-
             <div className="wrapper">
               <div className="menu-item">
                 <a href="#">Credits</a>
