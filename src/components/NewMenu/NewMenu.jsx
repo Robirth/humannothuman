@@ -12,6 +12,13 @@ function NewMenu() {
 
     function initializeAnimation() {
       const path = document.querySelector('path');
+      const hamburger = document.getElementById('hamburger');
+
+      if (!path || !hamburger) {
+        console.error('Path or hamburger element not found.');
+        return;
+      }
+
       const spanBefore = CSSRulePlugin.getRule('#hamburger span:before');
 
       console.log('Path element:', path);
