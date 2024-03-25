@@ -57,11 +57,11 @@ function NewMenu() {
     );
 
     tl.to(path, 0.8, { attr: { d: start }, ease: Power2.easeIn }, "<").to(
-      path,
-      0.8,
-      { attr: { d: end }, ease: Power2.easeOut },
-      "-=0.5"
-    );
+        path,
+        0.8,
+        { attr: { d: end }, ease: Power2.easeOut },
+        "-=0.5" // Adjust the position in the timeline
+      );
 
     tl.to(".menu", 1, { visibility: "visible" }, "-=0.5");
 
