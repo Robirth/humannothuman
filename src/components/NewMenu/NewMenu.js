@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import "./menu.css";
+import "./style.css";
 import { gsap } from "gsap";
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 
