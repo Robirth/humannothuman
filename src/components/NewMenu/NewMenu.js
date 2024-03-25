@@ -156,6 +156,6 @@ function revealMenuItems() {
     </div>
     </div>
   );
-;
+
 
 export default NewMenu;
