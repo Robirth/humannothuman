@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
-import "./style.css";
 import { gsap, Power2 } from "gsap";
 import { CSSPlugin, CSSRulePlugin } from "gsap/all";
+import "./style.css";
 
 // Register plugins with GSAP
 gsap.registerPlugin(CSSPlugin, CSSRulePlugin);
@@ -9,22 +9,21 @@ gsap.registerPlugin(CSSPlugin, CSSRulePlugin);
 const tl = gsap.timeline({ paused: true });
 
 function NewMenu() {
-  let path; // Define path variable
-  let spanBefore; // Define spanBefore variable
+  useEffect(() => {
+    initializeAnimation();
+  }, []);
 
-  // Function to initialize animation
   function initializeAnimation() {
-    path = document.querySelector("path");
-    spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
+    const path = document.querySelector("path");
+    const spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
 
     gsap.set(spanBefore, { background: "#000" });
     gsap.set(".menu", { visibility: "hidden" });
 
-    revealMenu(); // Call revealMenu function
+    revealMenu(path);
   }
 
-  // Function to reveal menu items
-  function revealMenu() {
+  function revealMenu(path) {
     const start = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
     const end = "M0,1005S175,995,500,995s500,5,500,5V0H0Z";
 
@@ -36,7 +35,9 @@ function NewMenu() {
     });
 
     tl.to("#hamburger span", 1, { background: "#e2e2dc", ease: "power2.inOut" }, "<");
-    tl.to(spanBefore, 1, { background: "#e2e2dc", ease: "power2.inOut" }, "<");
+    tl.to(path, 0.8, { attr: { d: start }, ease: Power2.easeIn }, "<");
+    tl.to(path, 0.8, { attr: { d: end }, ease: Power2.easeOut }, "-=0.5");
+    tl.to(".menu", 1, { visibility: "visible" }, "-=0.5");
 
     tl.to(
       ".btn .btn-outline",
@@ -52,15 +53,6 @@ function NewMenu() {
       "<"
     );
 
-    tl.to(path, 0.8, { attr: { d: start }, ease: Power2.easeIn }, "<").to(
-      path,
-      0.8,
-      { attr: { d: end }, ease: Power2.easeOut },
-      "-=0.5"
-    );
-
-    tl.to(".menu", 1, { visibility: "visible" }, "-=0.5");
-
     tl.to(
       ".menu-item > a",
       1,
@@ -75,12 +67,6 @@ function NewMenu() {
     ).reverse();
   }
 
-  // Initialize animation when component mounts
-  useEffect(() => {
-    initializeAnimation();
-  }, []);
-
-  // Return JSX
   return (
     <div>
       <div>
