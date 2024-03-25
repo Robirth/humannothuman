@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import "./style.css";
-import { gsap } from "gsap";
+
+import { gsap, Power2 } from "gsap";
 import { CSSPlugin, CSSRulePlugin } from "gsap/all";
 
 // Register plugins with GSAP
