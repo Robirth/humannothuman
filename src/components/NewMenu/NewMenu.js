@@ -17,6 +17,9 @@ function NewMenu() {
     const path = document.querySelector("path");
     const spanBefore = CSSRulePlugin.getRule("#hamburger span:before");
 
+    console.log("Path element:", path);
+    console.log("Span before element:", spanBefore);
+
     gsap.set(spanBefore, { background: "#000" });
     gsap.set(".menu", { visibility: "hidden" });
 
