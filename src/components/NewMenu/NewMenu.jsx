@@ -1,16 +1,23 @@
-import React, { Fragment, useEffect } from 'react';
-import { useGSAP } from '@gsap/react';
+import React, { useEffect, useState } from 'react';
 import { gsap, Power2 } from 'gsap';
 import { CSSPlugin, CSSRulePlugin } from 'gsap/all';
+import { useGSAP } from "@gsap/react";
 import './style.css';
 
 // Register plugins with GSAP
 gsap.registerPlugin(CSSPlugin, CSSRulePlugin);
 
 function NewMenu() {
-  const [tl] = useGSAP();
+  const [timeline, setTimeline] = useState(null);
+  const gsapTimeline = useGSAP();
 
   useEffect(() => {
+    setTimeline(gsapTimeline);
+  }, [gsapTimeline]);
+
+  useEffect(() => {
+    if (!timeline) return;
+
     function initializeAnimation() {
       const path = document.querySelector('path');
       const hamburger = document.getElementById('hamburger');
@@ -32,19 +39,19 @@ function NewMenu() {
       const start = 'M0 502S175 272 500 272s500 230 500 230V0H0Z';
       const end = 'M0,1005S175,995,500,995s500,5,500,5V0H0Z';
 
-      tl.to('#hamburger', 1.25, {
+      timeline.to('#hamburger', 1.25, {
         marginTop: '-5px',
         x: -40,
         y: 40,
         ease: 'power4.inOut',
       });
 
-      tl.to("#hamburger span", 1, { background: '#e2e2dc', ease: 'power2.inOut' }, '<');
-      tl.to(path, 0.8, { attr: { d: start }, ease: Power2.easeIn }, '<');
-      tl.to(path, 0.8, { attr: { d: end }, ease: Power2.easeOut }, '-=0.5');
-      tl.to('.menu', 1, { visibility: 'visible' }, '-=0.5');
+      timeline.to("#hamburger span", 1, { background: '#e2e2dc', ease: 'power2.inOut' }, '<');
+      timeline.to(path, 0.8, { attr: { d: start }, ease: Power2.easeIn }, '<');
+      timeline.to(path, 0.8, { attr: { d: end }, ease: Power2.easeOut }, '-=0.5');
+      timeline.to('.menu', 1, { visibility: 'visible' }, '-=0.5');
 
-      tl.to(
+      timeline.to(
         '.btn .btn-outline',
         1.25,
         {
@@ -58,7 +65,7 @@ function NewMenu() {
         '<'
       );
 
-      tl.to(
+      timeline.to(
         '.menu-item > a',
         1,
         {
@@ -76,9 +83,11 @@ function NewMenu() {
 
     // Clean up function to run when component unmounts
     return () => {
-      tl.kill(); // Kill the GSAP timeline to prevent memory leaks
+      if (timeline && typeof timeline.kill === 'function') {
+        timeline.kill(); // Kill the GSAP timeline to prevent memory leaks
+      }
     };
-  }, [tl]); // Dependency array ensures this effect runs only once after initial render
+  }, [timeline]); // Added 'timeline' as a dependency
 
   return (
     <div>
@@ -88,11 +97,9 @@ function NewMenu() {
             <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
           </svg>
         </div>
-        <Fragment>
-          <div>
-            {/* menu items */}
-          </div>
-        </Fragment>
+        <div>
+          {/* menu items */}
+        </div>
       </div>
 
       <div className="menu">
@@ -139,6 +146,7 @@ function NewMenu() {
             <div className="wrapper">
               <div className="menu-item">
                 <a href="#">Credits</a>
+
                 <div className="menu-item-revealer"></div>
               </div>
             </div>
