@@ -9,6 +9,7 @@ import NewMenu from "./components/NewMenu/NewMenu";
 import Next from "./components/Next/index";
 
 
+
 Builder.registerComponent(Counter, {
   name: "Counter",
   inputs: [
@@ -37,5 +38,5 @@ Builder.registerComponent(NewMenu, {
   name: "NewMenu",
 });
 Builder.registerComponent(Next, {
-  name: "Next",
+  name: "index",
 });

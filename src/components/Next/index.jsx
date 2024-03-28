@@ -1,5 +1,8 @@
-<>
+import React, { useEffect, useState } from 'react';
+
+
   {/* Hello world */}
+<React.Fragment>
   <meta charSet="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sticky Image Effect | Codrops</title>
@@ -24,11 +27,15 @@
       <p className="frame__tip">Click &amp; drag</p>
     </div>
     <div className="content" id="app">
-      {/* the content */}
+      <div>
+        {/* the content */}
+      </div>
     </div>
   </main>
   <div className="cursor">
     <div className="cursor__inner cursor__inner--circle" />
     <div className="cursor__inner cursor__inner--dot" />
   </div>
-</>
+</React.Fragment>
+export default Next;
+
