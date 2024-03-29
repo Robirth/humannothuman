@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import '.dist/base.css';
-import '.dist/base.css';
+import './dist/base.94ea9517.css';
+import './dist/styles.2c302241.css';
+
 
 
 
