@@ -1,41 +1,33 @@
 import React, { useEffect, useState } from 'react';
+import '.dist/base.css';
+import '.dist/base.css';
 
 
   {/* Hello world */}
-<React.Fragment>
-  <meta charSet="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sticky Image Effect | Codrops</title>
-  <meta
-    name="description"
-    content="A recreation of the sticky image effect seen on the websites of MakeReign and Ultranoir using three.js."
-  />
-  <meta
-    name="keywords"
-    content="three.js, sticky, animation, webgl, javascript, scroll, drag"
-  />
-  <meta name="author" content="Codrops" />
-  <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="stylesheet" href="https://use.typekit.net/ncw8xrb.css" />
-  <link rel="stylesheet" type="text/css" href="css/base.css" />
-  <link rel="stylesheet" type="text/css" href="css/styles.css" />
-  <main>
-    <div className="frame">
-      <div className="frame__title-wrap">
-        <h1 className="frame__title">HUMAN|NOTHUMAN</h1>
+return (
+  <React.Fragment>
+    
+  
+    <main>
+      <div className="frame">
+        <div className="frame__title-wrap">
+          <h1 className="frame__title">HUMAN|NOTHUMAN</h1>
+        </div>
+        <p className="frame__tip">Click &amp; drag</p>
       </div>
-      <p className="frame__tip">Click &amp; drag</p>
-    </div>
-    <div className="content" id="app">
-      <div>
-        {/* the content */}
+      <div className="content" id="app">
+        <div>
+          {/* the content */}
+        </div>
       </div>
+    </main>
+    <div className="cursor">
+      <div className="cursor__inner cursor__inner--circle" />
+      <div className="cursor__inner cursor__inner--dot" />
     </div>
-  </main>
-  <div className="cursor">
-    <div className="cursor__inner cursor__inner--circle" />
-    <div className="cursor__inner cursor__inner--dot" />
-  </div>
-</React.Fragment>
+  </React.Fragment>
+);
+
+
 export default Next;
 
