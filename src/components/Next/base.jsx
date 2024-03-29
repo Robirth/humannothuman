@@ -59,7 +59,7 @@ const StickyImageEffect = () => {
           <div className="cursor__inner cursor__inner--circle"></div>
           <div className="cursor__inner cursor__inner--dot"></div>
         </div>
-        <script src="js/index.js"></script>
+        <script src="dist/js.c1161f3d.js"></script>
       </body>
     </html>
   );

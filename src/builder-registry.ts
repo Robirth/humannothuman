@@ -6,7 +6,8 @@ import Counter from "./components/Counter/Counter";
 import ThreeScene from "./components/ThreeScene/ThreeScene";
 import Menu from "./components/Menu/Menu";
 import NewMenu from "./components/NewMenu/NewMenu";
-import Next from "./components/Next/index";
+import Next from "./components/Next";
+
 
 
 
@@ -36,7 +37,4 @@ Builder.registerComponent(Menu, {
 });
 Builder.registerComponent(NewMenu, {
   name: "NewMenu",
-});
-Builder.registerComponent(Next, {
-  name: "index",
 });
