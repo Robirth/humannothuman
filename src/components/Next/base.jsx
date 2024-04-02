@@ -1,25 +1,19 @@
 import React from 'react';
+import "./dist/styles.2c302241.css";
+import "./dist/base.94ea9517.css";
+import "./dist/Cursor.js";
+import "./dist/js.c1161f3d.js";
+
+
+
+
+
 
 const StickyImageEffect = () => {
   return (
     <html lang="en" className="no-js">
       <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Sticky Image Effect | Codrops</title>
-        <meta
-          name="description"
-          content="A recreation of the sticky image effect seen on the websites of MakeReign and Ultranoir using three.js."
-        />
-        <meta
-          name="keywords"
-          content="three.js, sticky, animation, webgl, javascript, scroll, drag"
-        />
-        <meta name="author" content="Codrops" />
-        <link rel="shortcut icon" href="favicon.ico" />
-        <link rel="stylesheet" href="https://use.typekit.net/ncw8xrb.css" />
-        <link rel="stylesheet" type="text/css" href="css/base.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+       
         <script>
           {`document.documentElement.className = "js";
             var supportsCssVars = function () {
@@ -43,7 +37,7 @@ const StickyImageEffect = () => {
               );`}
         </script>
       </head>
-      <body>
+   
         <main>
           <div className="frame">
             <div className="frame__title-wrap">
@@ -59,8 +53,8 @@ const StickyImageEffect = () => {
           <div className="cursor__inner cursor__inner--circle"></div>
           <div className="cursor__inner cursor__inner--dot"></div>
         </div>
-        <script src="dist/js.c1161f3d.js"></script>
-      </body>
+       
+   
     </html>
   );
 }

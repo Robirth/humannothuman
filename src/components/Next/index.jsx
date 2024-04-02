@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import './dist/base.94ea9517.css';
-import './dist/styles.2c302241.css';
-import './dist/js.c1161f3d.js';
+import React from 'react';
 
+
+import "./dist/styles.2c302241.css";
+import "./dist/base.94ea9517.css";
+
+import "./dist/js.c1161f3d.js";
 
 
 const Next = () => {
+  
   return (
     <React.Fragment>
       <main>
