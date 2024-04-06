@@ -1,20 +1,11 @@
-import React, { useEffect } from 'react';
-import "./dist/base.94ea9517.css";
-import "./dist/styles.2c302241.css";
+import React from 'react';
 import "./dist/js.c1161f3d.js";
 
+
+
+
+
 const StickyImageEffect = () => {
-  useEffect(() => {
-    const cursorElement = document.querySelector('.cursor');
-    const cursor = new Cursor(cursorElement);
-
-    function Cursor(el) {
-      console.log('Initializing Cursor with element:', el);
-      this.DOM.el = el;
-      // Rest of the constructor...
-    }
-  }, []); // Run this effect only once after the component is mounted
-
   return (
     <html lang="en" className="no-js">
       <head>

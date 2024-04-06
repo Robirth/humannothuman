@@ -1,8 +1,6 @@
 const withBuilderDevTools = require("@builder.io/dev-tools/next")();
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withBuilderDevTools({
-  productionBrowserSourceMaps: true
-});
+const nextConfig = withBuilderDevTools({});
 
 module.exports = nextConfig;

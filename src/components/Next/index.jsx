@@ -1,25 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import "./dist/base.94ea9517.css";
 import "./dist/styles.2c302241.css";
 import "./dist/js.c1161f3d.js";
 
-
 const Next = () => {
-  useEffect(() => {
-    // Check if window object is defined (i.e., if code is running in a browser environment)
-    if (typeof window !== 'undefined') {
-      const cursorElement = document.querySelector('.cursor');
-      const cursor = new Cursor(cursorElement);
-
-      function Cursor(el) {
-        console.log('Initializing Cursor with element:', el);
-        this.DOM = {}; // Initialize this.DOM as an empty object
-        this.DOM.el = el; // Set the el property on this.DOM
-        // Rest of the constructor...
-      }
-    }
-  }, []); // Run this effect only once after the component is mounted
-
   return (
     <React.Fragment>
       <main>
@@ -44,4 +28,3 @@ const Next = () => {
 }
 
 export default Next;
-
