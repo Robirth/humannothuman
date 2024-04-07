@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import "./dist/js.c1161f3d.js";
 

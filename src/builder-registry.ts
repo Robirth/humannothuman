@@ -4,7 +4,7 @@ import BotPage from "./components/Bots/BotPage";
 import Counter from "./components/Counter/Counter";
 import Menu from "./components/Menu/Menu";
 import NewMenu from "./components/NewMenu/NewMenu";
-import Next from "./components/Next/index";
+
 
 import Slide from "./components/Slide/Slide";
 import ThreeScene from "./components/ThreeScene/ThreeScene";
@@ -39,6 +39,3 @@ Builder.registerComponent(NewMenu, {
   name: "NewMenu",
 });
 
-Builder.registerComponent(Next, {
-  name: "index",
-});
