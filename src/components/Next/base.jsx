@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import "./dist/js.c1161f3d.js";
+import "./dist/test.css";
 
 
 
@@ -10,7 +11,8 @@ const StickyImageEffect = () => {
   return (
     <html lang="en" className="no-js">
       <head>
-       
+    
+
         <script>
           {`document.documentElement.className = "js";
             var supportsCssVars = function () {

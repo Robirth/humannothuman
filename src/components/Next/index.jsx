@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
-import "./dist/base.94ea9517.css";
-import "./dist/styles.2c302241.css";
-import "./dist/js.c1161f3d.js";
+import "./dist/base.5f386e0a.css";
+import "./dist/styles.a5aeaf67.css";
+import "./dist/js.1837f6e0.js";
 
 const Next = () => {
   return (
