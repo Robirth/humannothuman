@@ -9,6 +9,7 @@ import NewMenu from "./components/NewMenu/NewMenu";
 import Slide from "./components/Slide/Slide";
 import ThreeScene from "./components/ThreeScene/ThreeScene";
 import index from "./components/Next/index";
+import Next from "./components/Next/index";
 
 Builder.registerComponent(Counter, {
   name: "Counter",
@@ -39,7 +40,7 @@ Builder.registerComponent(Menu, {
 Builder.registerComponent(NewMenu, {
   name: "NewMenu",
 });
-Builder.registerComponent(index, {
+Builder.registerComponent(Next, {
   name: "index",
 });
 
