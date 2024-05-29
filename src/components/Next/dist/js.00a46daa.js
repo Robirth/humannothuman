@@ -42222,6 +42222,7 @@ var Slides = exports.Slides = /*#__PURE__*/function () {
         chevronContainer.appendChild(chevron1);
         chevronContainer.appendChild(chevron2);
         chevronContainer.appendChild(chevron3);
+        chevronContainer.appendChild(textdown);
         slide.appendChild(chevronContainer);
       }
 
@@ -42244,6 +42245,7 @@ var Slides = exports.Slides = /*#__PURE__*/function () {
         thevronContainer.appendChild(thevron1);
         thevronContainer.appendChild(thevron2);
         thevronContainer.appendChild(thevron3);
+        thevronContainer.appendChild(text);
         slide.appendChild(thevronContainer);
       }
 
@@ -42568,7 +42570,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53944" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61316" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
