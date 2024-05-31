@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
-import "/base.5f386e0a.css";
-import "/styles.485f1646.css";
+import "./dist/base.5f386e0a.css";
+import "./dist/styles.485f1646.css";
 
 export default function Home() {
   useEffect(() => {
     // Dynamically load the JavaScript file on the client-side
     const script = document.createElement('script');
-    script.src = '/js.771ef394.js';
+    script.src = './dist/js.771ef394.js';
     script.async = true;
     document.body.appendChild(script);
 
