@@ -1,9 +1,7 @@
 import { useEffect } from 'react';
+import Head from 'next/head';
 import "./dist/base.5f386e0a.css";
 import "./dist/styles.485f1646.css";
-
-
-
 
 export default function Home() {
   useEffect(() => {
@@ -21,15 +19,12 @@ export default function Home() {
 
   return (
     <>
-      <Next>
+      <Head>
         <title>HNH</title>
         <meta name="description" content="A recreation of the sticky image effect seen on the websites of MakeReign and Ultranoir using three.js." />
         <meta name="keywords" content="three.js, sticky, animation, webgl, javascript, scroll, drag" />
         <meta name="author" content="Codrops" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://use.typekit.net/ncw8xrb.css" />
-        <link rel="stylesheet" href="/css/base.css" />
-        <link rel="stylesheet" href="/css/styles.css" />
         <script dangerouslySetInnerHTML={{
           __html: `
             document.documentElement.className = "js";
@@ -54,7 +49,7 @@ export default function Home() {
               );
           `,
         }} />
-      </Next>
+      </Head>
       <main>
         <div className="frame">
           <div className="frame__title-wrap">
