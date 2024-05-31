@@ -25,7 +25,7 @@ export default function Home() {
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/ncw8xrb.css" />
         <link rel="stylesheet" href="./dist//css/base.5f386e0a.css" /> {/* Correct path to CSS file */}
-        <link rel="stylesheet" href="./dist//css/styles.485f1646.css" /> {/* Correct path to CSS file */}
+        <link rel="stylesheet" href="./dist//css//styles.485f1646.css" /> {/* Correct path to CSS file */}
         <script dangerouslySetInnerHTML={{
           __html: `
             document.documentElement.className = "js";
