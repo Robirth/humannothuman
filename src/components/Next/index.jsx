@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 
-export default function Index {
+function Index() {
   useEffect(() => {
     // Dynamically load the JavaScript file on the client-side
     const script = document.createElement('script');
