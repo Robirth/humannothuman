@@ -2,7 +2,7 @@
 import { Builder } from "@builder.io/react";
 import BotPage from "./components/Bots/BotPage";
 import Counter from "./components/Counter/Counter";
-import Index from "./components/Next/Index";
+import Next from "./components/Next/Next";
 import Menu from "./components/Menu/Menu";
 import NewMenu from "./components/NewMenu/NewMenu";
 import Slide from "./components/Slide/Slide";
@@ -38,6 +38,7 @@ Builder.registerComponent(NewMenu, {
   name: "NewMenu",
 });
 
-Builder.registerComponent(Index, {
-  name: "Index",
+
+Builder.registerComponent(Next, {
+  name: "Next",
 });
