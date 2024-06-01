@@ -1,0 +1,365 @@
+#app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #131319;
+}
+
+canvas {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently */
+}
+
+.slides {
+  box-sizing: border-box;
+  position: absolute;
+  top: 75%;
+  padding: 0 10vw;
+  width: 100%;
+  max-width: 100%;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently */
+}
+
+.slide {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 33vh;
+  color: #fff;
+  transform: translateY(-50%);
+  transition: transform 1300ms cubic-bezier(0.2, 1, 0.3, 1), opacity 500ms cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.slide-meta {
+  margin: 0;
+  font-size: 1.35rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slide-meta,
+.slide-more {
+  opacity: 0;
+  transition: opacity 900ms cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.show-meta .slide-meta,
+.show-meta .slide-more {
+  opacity: 1;
+  transition: opacity 1500ms 300ms cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.slide-more {
+  border-bottom: 1px solid;
+}
+
+.slide-more:hover {
+  border-bottom: 1px solid transparent;
+}
+
+.slide-title {
+  font-size: 6vw;
+  margin: 0;
+  color: #000000;
+  text-indent: -0.5vw;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 900;
+  transition: color 500ms cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.prev,
+.next {
+  opacity: 0;
+}
+
+.prev {
+  transform: translateY(-85%);
+}
+
+.next {
+  transform: translateY(-15%);
+}
+
+.prev .slide-title,
+.next .slide-title {
+  -webkit-text-stroke: 1.5px #fafafa;
+  text-stroke: 1.5px #fafafa;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+}
+
+.scrolling>.slide {
+  transform: translateY(-50%);
+  opacity: 1;
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.first-slide-visible {
+  opacity: 1;
+}
+
+.progress-container {
+  position: absolute;
+    top: -45%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: wheat;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.numbers-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-num {
+  color: red;
+}
+
+.slash {
+  color: white;
+  margin: 0 5px;
+}
+
+.last-num {
+  color: blue;
+}
+
+.click-drag {
+  color: black;
+  font-size: 12px;
+  margin-top: 10px;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.container {
+  top:-105px;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  padding: 1vw 33vw;
+
+ 
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+  }
+
+  .first-slide-visible {
+  opacity: 1;
+}
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: red;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.textdown {
+  display: block;
+  margin-top: -20px;
+  margin-left: -27px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: red;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+.containers {
+  top: -150px;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  padding: 1vw 33vw;
+}
+
+.thevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: tove 3s ease-out infinite;
+}
+
+.thevron:first-child {
+  animation: tove 3s ease-out 1s infinite;
+}
+
+.thevron:nth-child(2) {
+  animation: tove 3s ease-out 2s infinite;
+}
+
+.thevron:before,
+.thevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: blue;
+}
+
+.thevron:before {
+  left: 0;
+  transform: skew(0deg, -30deg);
+}
+
+.thevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, 30deg);
+}
+
+@keyframes tove {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 10px;
+  margin-left: -px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: blue;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=/styles.b61e60ae.css.map */
