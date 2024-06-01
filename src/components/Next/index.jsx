@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 
-export default function Home() {
+export default function Index {
   useEffect(() => {
     // Dynamically load the JavaScript file on the client-side
     const script = document.createElement('script');
-    script.src = './dist/js.771ef394.js'; // Correct path to the JS file in the public directory
+    script.src = '/dist/js.771ef394.js'; // Correct path to the JS file in the public directory
     script.async = true;
     document.body.appendChild(script);
 
@@ -24,8 +24,8 @@ export default function Home() {
         <meta name="author" content="Codrops" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/ncw8xrb.css" />
-        <link rel="stylesheet" href="./dist/css/base.5f386e0a.css" /> {/* Correct path to CSS file */}
-        <link rel="stylesheet" href="./dist/css/styles.485f1646.css" /> {/* Correct path to CSS file */}
+        <link rel="stylesheet" href="/dist/base.5f386e0a.css" /> {/* Correct path to CSS file */}
+        <link rel="stylesheet" href="/dist/styles.485f1646.css" /> {/* Correct path to CSS file */}
         <script dangerouslySetInnerHTML={{
           __html: `
             document.documentElement.className = "js";
@@ -68,3 +68,4 @@ export default function Home() {
     </>
   );
 }
+export default Index;
