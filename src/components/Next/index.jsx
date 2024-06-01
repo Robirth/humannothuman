@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 import './dist/js.771ef394.js';
 import './dist/css/base.5f386e0a.css';
-import './dist/css//styles.485f1646.css"';
+import './dist/css/styles.485f1646.css"';
 
 
 export default function Home() {
