@@ -8,8 +8,8 @@ import NewMenu from "./components/NewMenu/NewMenu";
 
 import Slide from "./components/Slide/Slide";
 import ThreeScene from "./components/ThreeScene/ThreeScene";
-import index from "./components/Next/index";
-import Next from "./components/Next/index";
+import index from "./components/Next/Index";
+import Next from "./components/Next/Index";
 
 Builder.registerComponent(Counter, {
   name: "Counter",
@@ -41,6 +41,6 @@ Builder.registerComponent(NewMenu, {
   name: "NewMenu",
 });
 Builder.registerComponent(Next, {
-  name: "index",
+  name: "Index",
 });
 
