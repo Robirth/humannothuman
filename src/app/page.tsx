@@ -36,6 +36,7 @@ export default function Home() {
         
         <video
           className="block md:hidden box-border object-cover fixed flex-col shrink-0 min-h-[20px] min-w-[20px] w-full h-full"
+          poster='https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F1b9c60d702b741c89d3562f4b3e5dafa'
           autoPlay={false}
           muted={false}
           controls={true}
