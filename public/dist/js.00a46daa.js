@@ -42218,7 +42218,6 @@ var Slides = exports.Slides = /*#__PURE__*/function () {
         chevron3.className = "chevron";
         var textdown = document.createElement("span");
         textdown.className = "textdown";
-        textdown.textContent = "Swipe Down";
         chevronContainer.appendChild(chevron1);
         chevronContainer.appendChild(chevron2);
         chevronContainer.appendChild(chevron3);
@@ -42241,7 +42240,6 @@ var Slides = exports.Slides = /*#__PURE__*/function () {
         thevron3.className = "thevron";
         var text = document.createElement("span");
         text.className = "text";
-        text.textContent = "Swipe Up";
         thevronContainer.appendChild(thevron1);
         thevronContainer.appendChild(thevron2);
         thevronContainer.appendChild(thevron3);
@@ -42570,7 +42568,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50820" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60535" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
