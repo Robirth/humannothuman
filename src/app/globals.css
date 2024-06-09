@@ -3,12 +3,7 @@
 @tailwind base;
 
 @tailwind utilities;
-@import"https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,800;1,6..12,400&display=swap";*,:before,:after {
-  box-sizing: border-box;
-  border-width: 0;
-  border-style: solid;
-  border-color: #e5e7eb
-}
+
 #app {
   width: 100vw;
   height: 100vh;
