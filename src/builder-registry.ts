@@ -1,10 +1,11 @@
 "use client";
 import { Builder } from "@builder.io/react";
 import BotPage from "./components/Bots/BotPage";
+import Charts from "./components/Charts/Charts";
 import Counter from "./components/Counter/Counter";
-import Next from "./components/Next/Next";
 import Menu from "./components/Menu/Menu";
 import NewMenu from "./components/NewMenu/NewMenu";
+import Next from "./components/Next/Next";
 import Slide from "./components/Slide/Slide";
 import ThreeScene from "./components/ThreeScene/ThreeScene";
 
@@ -38,7 +39,10 @@ Builder.registerComponent(NewMenu, {
   name: "NewMenu",
 });
 
-
 Builder.registerComponent(Next, {
   name: "Next",
+});
+
+Builder.registerComponent(Charts, {
+  name: "Charts",
 });
