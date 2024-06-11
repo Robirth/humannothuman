@@ -11,9 +11,7 @@ export default function Home() {
    
     <div className="box-border flex relative flex-col shrink-0 w-full min-h-[20px] min-w-[20px]">
         
-        <aside className="box-border flex absolute flex-col shrink-0 mt-5 h-screen z-[66]">
-      <Menu />
-    </aside>
+       
 
 <a href="/test"> <img
       loading="lazy"
