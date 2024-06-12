@@ -5,7 +5,7 @@ export default function Next() {
   useEffect(() => {
     // Dynamically load the JavaScript file on the client-side
     const script = document.createElement('script');
-    script.src = '/dist/js.dd589ab9.js'; // Correct path to the JS file in the public directory
+    script.src = '/dist/js.8d231c4b.js'; // Correct path to the JS file in the public directory
     script.async = true;
     document.body.appendChild(script);
 
