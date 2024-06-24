@@ -55,6 +55,7 @@ export default function Next() {
         <div className="frame">
           <div className="frame__title-wrap">
             <h1 className="frame__title">HUMAN|NOTHUMAN</h1>
+            <h1 class="frame__subtitle">ROBERT ANTHONY HINDS</h1> 
           </div>
         </div>
         <div className="content" id="app">
