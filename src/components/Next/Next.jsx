@@ -24,7 +24,7 @@ export default function Next() {
         <meta name="author" content="Codrops" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/ncw8xrb.css" />
-        <link rel="stylesheet" href="/dist/base.f0a268a8.css" /> {/* Correct path to CSS file */}
+        <link rel="stylesheet" href="/dist/base.98fd6c19.css" /> {/* Correct path to CSS file */}
         <link rel="stylesheet" href="/dist/styles.9a091037.css" /> {/* Correct path to CSS file */}
         <script dangerouslySetInnerHTML={{
           __html: `
