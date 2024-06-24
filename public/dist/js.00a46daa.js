@@ -42478,12 +42478,12 @@ var cursor = new _Cursor.Cursor(document.querySelector(".cursor"));
 var slidesData = [{
   image: _.default,
   title: "ABOUT",
-  meta: "ROBERT HINDS",
-  more: "/about",
+  meta: "ROBERT ANTHONY HINDS",
+  more: "/about-us",
   hasThevron: true // No chevron animation for this slide
 }, {
   image: _2.default,
-  title: "Work",
+  title: "WORK",
   meta: "WEB DEVELOPMENT",
   more: "/work",
   hasChevron: true,
@@ -42498,14 +42498,14 @@ var slidesData = [{
 }, {
   image: _4.default,
   title: "CONTACT",
-  meta: "email",
+  meta: "EMAIL",
   more: "/contact",
   hasChevron: true,
   hasThevron: true
 }, {
   image: _5.default,
   title: "Lab",
-  meta: "upon request",
+  meta: "ex·per·i·men·tal",
   more: "/lab",
   hasChevron: true
 }];
@@ -42568,7 +42568,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63381" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53987" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

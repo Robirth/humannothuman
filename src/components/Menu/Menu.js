@@ -10,8 +10,9 @@ import { useGSAP } from "@gsap/react";
 
 const menuLinks = [
   { path: "/", label: "Home" },
+  { path: "/about-us", label: "About" },
   { path: "/work", label: "Work" },
-  { path: "/about", label: "About" },
+  { path: "/shop", label: "Shop" },
   { path: "/contact", label: "Contact" },
   { path: "/lab", label: "Lab" },
 ];
@@ -60,7 +61,7 @@ const Menu = () => {
       {/* menu-bar */}
       <div className="menu-bar">
         <div className="menu-logo">
-          <Link href="/">Human |Nothuman</Link>
+          <Link href="/">HUMAN | NOTHUMAN</Link>
         </div>
         <div className="menu-open" onClick={toggleMenu}>
           <p>Menu</p>
@@ -100,18 +101,15 @@ const Menu = () => {
               <a href="#">X &#8599;</a>
               <a href="#">Instagram &#8599;</a>
               <a href="#">LinkedIn &#8599;</a>
-              <a href="#">Behance &#8599;</a>
-              <a href="#">Dribbble &#8599;</a>
+             
             </div>
             <div className="menu-info-col">
-              <p>info@codegrid.com</p>
-              <p>0923 3984 23</p>
+              <p>info@humannothuman.ai</p>
+             
             </div>
           </div>
         </div>
-        <div className="menu-preview">
-          <p>View ShowReel</p>
-        </div>
+        
       </div>
     </div>
   );
