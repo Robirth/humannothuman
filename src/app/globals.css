@@ -216,15 +216,6 @@ canvas {
   animation: move 3s ease-out 2s infinite;
 }
 
-.chevron:before,
-.chevron:after {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 51%;
-  background: red;
-}
 
 .chevron:before {
   left: 0;
