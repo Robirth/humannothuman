@@ -109,7 +109,7 @@ canvas {
   margin: 0;
   color: #000000;
   text-indent: -0.5vw;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Helvetica', 'Arial','sans-serif';
   font-weight: 900;
   transition: color 500ms cubic-bezier(0.2, 1, 0.3, 1);
 }
