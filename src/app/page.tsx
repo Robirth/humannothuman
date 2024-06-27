@@ -11,7 +11,7 @@ export default function Home() {
 
     <div className="box-border flex relative flex-col shrink-0 w-full min-h-[20px] min-w-[20px]">
 
-<a href="/test"> <button className="c-btn">Skip</button></a>
+
 
       <a href="/test"> <img
         loading="lazy"
