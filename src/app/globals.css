@@ -293,15 +293,6 @@ canvas {
   animation: tove 3s ease-out 2s infinite;
 }
 
-.thevron:before,
-.thevron:after {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 51%;
-  background: blue;
-}
 
 .thevron:before {
   left: 0;
