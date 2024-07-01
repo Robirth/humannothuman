@@ -6,47 +6,42 @@ import Link from "next/link";
 import "./menu.css";
 
 import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
 
 const menuLinks = [
   { path: "/", label: "Home" },
-  { path: "/about-us", label: "About" },
+  { path: "/about-me", label: "About" },
   { path: "/work", label: "Work" },
-  { path: "/shop", label: "Shop" },
+  { path: "/merch", label: "Merch" },
   { path: "/contact", label: "Contact" },
   { path: "/lab", label: "Lab" },
 ];
 
 const Menu = () => {
-  const container = useRef();
+  const container = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const tl = useRef();
+  const tl = useRef(gsap.timeline({ paused: true }));
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
   };
 
-  useGSAP(
-    () => {
-      gsap.set(".menu-link-item-holder", { y: 75 });
-      tl.current = gsap
-        .timeline({ paused: true })
-        .to(".menu-overlay", {
-          duration: 1.25,
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-          ease: "power4.inOut",
-        })
-        .to(".menu-link-item-holder", {
-          y: 0,
-          duration: 1,
-          stagger: 0.1,
-          ease: "power4.out",
-          delay: -0.75,
-        });
-    },
-    { scope: container }
-  );
+  useEffect(() => {
+    gsap.set(".menu-link-item-holder", { y: 75 });
+    tl.current = gsap
+      .timeline({ paused: true })
+      .to(".menu-overlay", {
+        duration: 1.25,
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        ease: "power4.inOut",
+      })
+      .to(".menu-link-item-holder", {
+        y: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: "power4.out",
+        delay: -0.75,
+      });
+  }, []);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -58,7 +53,6 @@ const Menu = () => {
 
   return (
     <div className="menu-container" ref={container}>
-      {/* menu-bar */}
       <div className="menu-bar">
         <div className="menu-logo">
           <Link href="/">HUMAN | NOTHUMAN</Link>
@@ -68,19 +62,16 @@ const Menu = () => {
         </div>
       </div>
 
-      {/* menu-overlay */}
       <div className="menu-overlay">
-        {/* menu-overlay-bar */}
         <div className="menu-overlay-bar">
           <div className="menu-logo">
             <Link href="/">HUMAN | NOTHUMAN</Link>
           </div>
-          <div className="menu-close">
-            <p onClick={toggleMenu}>Close</p>
+          <div className="menu-close" onClick={toggleMenu}>
+            <p>Close</p>
           </div>
         </div>
 
-        {/* menu overlay items */}
         <div className="menu-close-icon" onClick={toggleMenu}>
           <p>&#x2715;</p>
         </div>
@@ -101,15 +92,12 @@ const Menu = () => {
               <a href="#">X &#8599;</a>
               <a href="#">Instagram &#8599;</a>
               <a href="#">LinkedIn &#8599;</a>
-             
             </div>
             <div className="menu-info-col">
               <p>info@humannothuman.ai</p>
-             
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   );
