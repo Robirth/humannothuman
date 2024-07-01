@@ -21,7 +21,7 @@ body {
   height: 100vh;
   background: var(--bg);
   font-family: "Roslindale Display Condensed";
-  overflow: hidden;
+  overflow: scroll;
 }
 
 /* Hero title styles */
