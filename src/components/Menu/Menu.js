@@ -9,9 +9,9 @@ import { gsap } from "gsap";
 
 const menuLinks = [
   { path: "/", label: "Home" },
-  { path: "/about-me", label: "About" },
+  { path: "/about-us", label: "About" },
   { path: "/work", label: "Work" },
-  { path: "/merch", label: "Merch" },
+  { path: "/shop", label: "Shop" },
   { path: "/contact", label: "Contact" },
   { path: "/lab", label: "Lab" },
 ];
