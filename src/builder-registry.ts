@@ -8,6 +8,7 @@ import NewMenu from "./components/NewMenu/NewMenu";
 import Next from "./components/Next/Next";
 import Slide from "./components/Slide/Slide";
 import ThreeScene from "./components/ThreeScene/ThreeScene";
+import Slider from "./components/Slider/Slider";
 
 Builder.registerComponent(Counter, {
   name: "Counter",
@@ -45,4 +46,7 @@ Builder.registerComponent(Next, {
 
 Builder.registerComponent(Charts, {
   name: "Charts",
+});
+Builder.registerComponent(Slider, {
+  name: "Slider",
 });
