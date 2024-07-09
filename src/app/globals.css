@@ -91,7 +91,15 @@ canvas {
   border-bottom: 1px solid transparent;
 }
 
-
+.slide-title {
+  font-size: 6vw;
+  margin: 0;
+  color: #000000;
+  text-indent: -0.5vw;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 900;
+  transition: color 500ms cubic-bezier(0.2, 1, 0.3, 1);
+}
 
 .prev,
 .next {
@@ -195,6 +203,15 @@ canvas {
   animation: move 3s ease-out 2s infinite;
 }
 
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: red;
+}
 
 .chevron:before {
   left: 0;
@@ -263,6 +280,15 @@ canvas {
   animation: tove 3s ease-out 2s infinite;
 }
 
+.thevron:before,
+.thevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: blue;
+}
 
 .thevron:before {
   left: 0;
