@@ -39,7 +39,7 @@ export default function Home() {
           controls={true}
           playsInline={true}
           loop={false}
-          src="https://cdn.builder.io/o/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F7be7e21fad2d44408c8e7594e1582dfe%2Fcompressed?apiKey=cfdade1741a141b6a543d6f07cefe0a0&token=7be7e21fad2d44408c8e7594e1582dfe&alt=media&optimized=true"
+          src="https://cdn.builder.io/o/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F4d79a358f45b4c8f9356540761d6232a%2Fcompressed?apiKey=cfdade1741a141b6a543d6f07cefe0a0&token=4d79a358f45b4c8f9356540761d6232a&alt=media&optimized=true"
         />
 
         {/* Placeholder */}
