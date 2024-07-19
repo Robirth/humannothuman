@@ -60,6 +60,7 @@ a.button::after {
   display: inline-block; /* Ensure the margin-top is applied */
   background-color: transparent; /* Ensure no background color is applied */
   vertical-align: middle; /* Align the triangle vertically in the middle */
+  color: inherit; /* Inherit the text color of the button */
 }
 
 /* Tablet and Desktop */
