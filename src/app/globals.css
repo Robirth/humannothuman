@@ -53,11 +53,11 @@ a.button:hover {
 }
 
 a.button::after {
-  content: '\25B6'; /* Unicode character for right-pointing triangle */
-  margin-left: 10px; /* Space between text and the triangle */
+  content: '►'; /* Unicode character for black right-pointing pointer */
+  margin-left: 10px; /* Space between text and the pointer */
   font-size: 1em; /* Adjust size as necessary */
   display: inline-block; /* Ensure the margin-top is applied */
-  vertical-align: middle; /* Align the triangle vertically in the middle */
+  vertical-align: middle; /* Align the pointer vertically in the middle */
   background: none; /* Ensure no background is applied */
   color: inherit; /* Inherit the text color of the button */
   border: none; /* Ensure no border is applied */
