@@ -6,15 +6,17 @@ export default function Home() {
   return (
     <div className="box-border flex relative flex-col shrink-0 w-full min-h-[20px] min-w-[20px]">
       <Head>
-        <script
-          type="module"
-          src="https://agent.d-id.com/v1/index.js"
-          data-name="did-agent"
-          data-mode="fabio"
-          data-client-key="Z29vZ2xlLW9hdXRoMnwxMTA0MTc1NDA1OTYyMTk4NjMxMTI6eDBVbko4SnRQNWNtTzB0SURpWnRs"
-          data-agent-id="agt_3yZn9XkE"
-          data-monitor="true"
-        ></script>
+        
+<script
+    type="module"
+    src="https://agent.d-id.com/v1/index.js"
+    data-name="did-agent"
+    data-mode="fabio"
+    data-client-key="Z29vZ2xlLW9hdXRoMnwxMTA0MTc1NDA1OTYyMTk4NjMxMTI6eDBVbko4SnRQNWNtTzB0SURpWnRs"
+    data-agent-id="agt_3yZn9XkE"
+    data-monitor="true">
+</script>
+    
       </Head>
       <a href="/test" className="button">Read more</a>
       <div className="fixed">
