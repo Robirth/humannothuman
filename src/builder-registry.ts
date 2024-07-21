@@ -6,7 +6,7 @@ import Counter from "./components/Counter/Counter";
 import Menu from "./components/Menu/Menu";
 import NewMenu from "./components/NewMenu/NewMenu";
 import Next from "./components/Next/Next";
-import Slide from "./components/Slide/Slide";
+
 import ThreeScene from "./components/ThreeScene/ThreeScene";
 import Slider from "./components/Slider/Slider";
 
@@ -28,9 +28,7 @@ Builder.registerComponent(ThreeScene, {
   name: "ThreeScene",
 });
 
-Builder.registerComponent(Slide, {
-  name: "Slide",
-});
+
 
 Builder.registerComponent(Menu, {
   name: "Menu",
