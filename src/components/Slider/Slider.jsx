@@ -188,6 +188,9 @@ const Slider = () => {
           <li className="active"></li>
           <li></li>
           <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
       </div>
     </section>
