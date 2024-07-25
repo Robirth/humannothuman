@@ -111,30 +111,48 @@ a.button::after {
 }
 
 .slide-meta {
-  margin: 0;
-  font-size: 1.35rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slide-meta,
-.slide-more {
   opacity: 0;
   transition: opacity 900ms cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-.show-meta .slide-meta,
+.show-meta .slide-meta {
+  opacity: 1;
+  transition: opacity 1500ms 300ms cubic-bezier(0.2, 1, 0.3, 1);
+}
+.slide-more {
+  opacity: 0;
+  transition: opacity 900ms cubic-bezier(0.2, 1, 0.3, 1);
+}
+.slide-more {
+  background-color: yellow;
+  color: black; /* Change text color to black for better readability */
+  text-decoration: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  border: none; /* Remove the border-bottom */
+  transition: opacity 1900ms cubic-bezier(0.2, 1, 0.3, 1);
+  position: relative; /* Ensure pseudo-element is positioned correctly */
+}
+
 .show-meta .slide-more {
   opacity: 1;
   transition: opacity 1500ms 300ms cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-.slide-more {
-  border-bottom: 1px solid;
+.slide-more:hover {
+  background-color: darkorange; /* Change background color on hover */
+  color: white; /* Change text color on hover */
 }
 
-.slide-more:hover {
-  border-bottom: 1px solid transparent;
+.slide-more::after {
+  content: '►'; /* Unicode character for right-pointing triangle */
+  margin-left: 10px; /* Space between text and the triangle */
+  margin-top: 1px; /* Adjust this value to position the triangle vertically */
+  font-size: 1em; /* Adjust size as necessary */
+  display: inline-block; /* Ensure the margin-top is applied */
+  vertical-align: middle; /* Align the triangle vertically in the middle */
 }
 
 .slide-title {

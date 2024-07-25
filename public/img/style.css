@@ -7,7 +7,7 @@ body{
     background-color: #232442;
     color: #fff;
     font-size: 15px;
-    font-family: Poppins;
+    font-family: 'Helvetica', 'Arial', sans-serif;
     & *{
         box-sizing: border-box;
         margin: 0;
@@ -89,7 +89,7 @@ body{
                         font-weight: 500;
                     }
                     & h2{
-                        font-family: 'League Gothic';
+                        font-family: 'Helvetica', 'Arial', sans-serif;
                         font-size: 11em;
                         line-height: 1em;
                     }
@@ -118,7 +118,7 @@ body{
                     grid-template-rows: 35px;
                     & button{
                         border-radius: 30px;
-                        font-family: 'League Gothic';
+                        font-family: 'Helvetica', 'Arial', sans-serif;
                         text-transform: uppercase;
                         color: #fff;
                         background-color: transparent;
