@@ -81,7 +81,7 @@ body{
                     right: var(--w-column);
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: space-around;
                     align-items: end;
                     gap: 20px;
                     & .category{
