@@ -5,7 +5,7 @@
 }
 body{
     margin: 0;
-    background-color: #232442;
+    background-color: transparent;
     color: #000;
     font-size: 11px;
     font-family: 'Helvetica', 'Arial', sans-serif;
@@ -39,8 +39,7 @@ body{
         }
     }
     & .carousel{
-        background-image: radial-gradient(
-            #dad8ce, #ffffff
+        background-color: transparent;
         );
         height: 100vh;
         overflow: hidden;
@@ -92,7 +91,7 @@ body{
                     & h2{
                         background-color:#ffffff;
                         font-family: 'Helvetica', 'Arial', sans-serif;
-                        font-size: 6em;
+                        font-size: 11em;
                         line-height: 1em;
                     }
                     & .description{
@@ -310,7 +309,7 @@ body{
                         justify-content: end;
                         padding-bottom: 100px;
                         & h2{
-                            font-size: 3em;
+                            font-size: 5em;
                         }
                     }
                     & figure{
