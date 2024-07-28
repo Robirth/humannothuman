@@ -305,7 +305,7 @@ body{
             & .list{
                 & .item{
                     & .content{
-                        justify-content: start;
+                        justify-content: unset;
                         padding-bottom: 100px;
                         & h2{
                             font-size: 2em;
