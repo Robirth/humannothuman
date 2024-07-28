@@ -193,7 +193,7 @@ body{
     }
     & .indicators{
         position: absolute;
-        top: 52%;
+        top: 77%;
         height: var(--w-column);
         width: min(1200px, 90vw);
         left: 50%;
@@ -205,7 +205,7 @@ body{
         gap: 10px;
         & .number{
             font-family: 'Helvetica', 'Arial', sans-serif;
-            font-size: 7vw;
+            font-size: 3vw;
         }
         & ul{
             display: flex;
