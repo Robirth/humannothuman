@@ -9,7 +9,7 @@ import Next from "./components/Next/Next";
 
 import ThreeScene from "./components/ThreeScene/ThreeScene";
 import Slider from "./components/Slider/Slider";
-
+import New from "./components/New/New";
 
 Builder.registerComponent(Counter, {
   name: "Counter",
@@ -49,3 +49,7 @@ Builder.registerComponent(Charts, {
 Builder.registerComponent(Slider, {
   name: "Slider",
 });
+Builder.registerComponent(New, {
+  name: "New",
+});
+
