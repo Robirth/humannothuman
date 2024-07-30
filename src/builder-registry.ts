@@ -49,8 +49,8 @@ Builder.registerComponent(Charts, {
 Builder.registerComponent(Slider, {
   name: "Slider",
 });
-Builder.registerComponent(View", {
-  name:"View"
+Builder.registerComponent(View, {
+  name:"View",
 
 });
 
