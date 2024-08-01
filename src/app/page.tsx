@@ -1,40 +1,57 @@
 import * as React from "react";
+import { useRef, useState } from "react";
 import Head from 'next/head';
 
 
 export default function Home() {
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    videoRef.current.play();
+    setIsPlaying(true);
+  };
+
   return (
     <div className="box-border flex relative flex-col shrink-0 w-full min-h-[20px] min-w-[20px]">
       <Head>
-        
-<script
-    type="module"
-    src="https://agent.d-id.com/v1/index.js"
-    data-name="did-agent"
-    data-mode="fabio"
-    data-client-key="Z29vZ2xlLW9hdXRoMnwxMTA0MTc1NDA1OTYyMTk4NjMxMTI6eDBVbko4SnRQNWNtTzB0SURpWnRs"
-    data-agent-id="agt_3yZn9XkE"
-    data-monitor="true">
-</script>
-    
+        <script
+          type="module"
+          src="https://agent.d-id.com/v1/index.js"
+          data-name="did-agent"
+          data-mode="fabio"
+          data-client-key="Z29vZ2xlLW9hdXRoMnwxMTA0MTc1NDA1OTYyMTk4NjMxMTI6eDBVbko4SnRQNWNtTzB0SURpWnRs"
+          data-agent-id="agt_3yZn9XkE"
+          data-monitor="true"
+        ></script>
       </Head>
       <a href="/test" className="button">Read more</a>
       <div className="fixed">
         {/* Desktop Video */}
         <video
+          ref={videoRef}
           className="hidden md:block box-border object-cover fixed flex-col shrink-0 min-h-[20px] min-w-[20px] w-full h-full"
           autoPlay={false}
           muted={false}
-          controls={true}
+          controls={false}
           playsInline={true}
           loop={false}
           src="https://cdn.builder.io/o/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F35892a6997a64b16a6422202b6b979c9%2Fcompressed?apiKey=cfdade1741a141b6a543d6f07cefe0a0&token=35892a6997a64b16a6422202b6b979c9&alt=media&optimized=true"
         />
 
+        {!isPlaying && (
+          <div
+            className="custom-play-button"
+            onClick={handlePlay}
+          >
+            <span>►</span>
+          </div>
+        )}
+
         {/* Mobile Video */}
         <video
           className="block md:hidden box-border object-cover fixed flex-col shrink-0 min-h-[20px] min-w-[20px] w-full h-full"
-          poster='https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F1b9c60d702b741c89d3562f4b3e5dafa'
+          poster="https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F1b9c60d702b741c89d3562f4b3e5dafa"
           autoPlay={false}
           muted={false}
           controls={true}
