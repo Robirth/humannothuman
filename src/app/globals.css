@@ -75,6 +75,7 @@ a.button::after {
   background-color: yellow;
   border-radius: 50%;
   cursor: pointer;
+  z-index:30;
 }
 
 .custom-play-button span {
