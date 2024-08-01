@@ -62,32 +62,28 @@ a.button::after {
   color: inherit; /* Inherit the text color of the button */
   border: none; /* Ensure no border is applied */
 }
-/* Ensure the desktop video is hidden on mobile and vice versa */
-@media (min-width: 640px) {
-  .mobile-video {
-    display: none; /* Hide mobile video on screens larger than 640px */
-  }
-
-  .desktop-video {
-    display: block; /* Show desktop video on screens larger than 640px */
-  }
-
-  .custom-play-button {
-    display: flex; /* Show custom play button on desktop */
-  }
+.desktopVideo {
+  display: none; /* Hidden by default */
 }
 
-@media (max-width: 639px) {
-  .mobile-video {
-    display: block; /* Show mobile video on screens 639px and smaller */
-  }
+.mobileVideo {
+  display: block; /* Visible by default */
+}
 
-  .desktop-video {
-    display: none; /* Hide desktop video on screens 639px and smaller */
-  }
+.customPlayButton {
+  display: none; /* Hidden by default */
+}
 
-  .custom-play-button {
-    display: none; /* Hide custom play button on mobile */
+/* Show desktop video and custom button on larger screens */
+@media (min-width: 768px) {
+  .desktopVideo {
+    display: block;
+  }
+  .mobileVideo {
+    display: none;
+  }
+  .customPlayButton {
+    display: block;
   }
 }
 

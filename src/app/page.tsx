@@ -37,7 +37,7 @@ export default function Home() {
         {/* Desktop Video */}
         <video
           ref={videoRef}
-          className="desktop-video box-border object-cover fixed flex-col shrink-0 min-h-[20px] min-w-[20px] w-full h-full"
+          className={`${styles.desktopVideo} box-border object-cover fixed flex-col shrink-0 min-h-[20px] min-w-[20px] w-full h-full`}
           poster="https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F1619028b3eb44bcebf652aa45ad83023"
           autoPlay={false}
           muted={false}
@@ -50,7 +50,7 @@ export default function Home() {
         {/* Custom Play Button for Desktop */}
         {!isPlaying && (
           <div
-            className="custom-play-button"
+            className={`${styles.customPlayButton} custom-play-button`}
             onClick={handlePlay}
           >
             <span>►</span>
@@ -59,7 +59,7 @@ export default function Home() {
 
         {/* Mobile Video */}
         <video
-          className="mobile-video box-border object-cover fixed flex-col shrink-0 min-h-[20px] min-w-[20px] w-full h-full"
+          className={`${styles.mobileVideo} box-border object-cover fixed flex-col shrink-0 min-h-[20px] min-w-[20px] w-full h-full`}
           poster="https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F2537612138fc4492a3b2a70480a21173"
           autoPlay={false}
           muted={false}
