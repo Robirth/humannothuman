@@ -63,7 +63,7 @@ a.button::after {
   border: none; /* Ensure no border is applied */
 }
 .custom-play-button {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -79,6 +79,7 @@ a.button::after {
 }
 
 .custom-play-button span {
+  padding-left: 5px;
   font-size: 32px;
   color: black;
 }
