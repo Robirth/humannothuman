@@ -1,106 +1,131 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+
 
 import "./menu.css";
 
 import { gsap } from "gsap";
 
-const menuLinks = [
-  { path: "/", label: "Home" },
-  { path: "/about-us", label: "About" },
-  { path: "/work", label: "Work" },
-  { path: "/shop", label: "Shop" },
-  { path: "/contact", label: "Contact" },
-  { path: "/lab", label: "Lab" },
+const { useRef, useState, useEffect, createRef } = React
+
+
+/*--------------------
+Items
+--------------------*/
+const items = [
+  {
+    name: "Freelance",
+    color: "#f44336",
+    href: "#"
+  },
+  {
+    name: "Design",
+    color: "#e91e63",
+    href: "#"
+  },
+  {
+    name: "Director",
+    color: "#9c27b0",
+    href: "#"
+  },
+  {
+    name: "Experience",
+    color: "#673ab7",
+    href: "#"
+  },
+  {
+    name: "Interface",
+    color: "#3f51b5",
+    href: "#"
+  }
 ];
 
-const Menu = () => {
-  const container = useRef(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const tl = useRef(gsap.timeline({ paused: true }));
 
-  const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
-
-  useEffect(() => {
-    gsap.set(".menu-link-item-holder", { y: 75 });
-    tl.current = gsap
-      .timeline({ paused: true })
-      .to(".menu-overlay", {
-        duration: 1.25,
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        ease: "power4.inOut",
-      })
-      .to(".menu-link-item-holder", {
-        y: 0,
-        duration: 1,
-        stagger: 0.1,
-        ease: "power4.out",
-        delay: -0.75,
-      });
-  }, []);
-
-  useEffect(() => {
-    if (isMenuOpen) {
-      tl.current.play();
-    } else {
-      tl.current.reverse();
+/*--------------------
+Menu
+--------------------*/
+const View = ({items}) => {
+  const $root = useRef()
+  const $indicator1 = useRef()
+  const $indicator2 = useRef()
+  const $items = useRef(items.map(createRef))
+  const [ active, setActive ] = useState(0)
+  
+  const animate = () => {
+    const menuOffset = $root.current.getBoundingClientRect()
+    const activeItem = $items.current[active].current
+    const { width, height, top, left } = activeItem.getBoundingClientRect()
+    
+    const settings = {
+      x: left - menuOffset.x,
+      y: top - menuOffset.y,
+      width: width,
+      height: height,
+      backgroundColor: items[active].color,
+      ease: 'elastic.out(.7, .7)',
+      duration: .8
     }
-  }, [isMenuOpen]);
+    
+    gsap.to($indicator1.current, {
+      ...settings,
+    })
+    
+    gsap.to($indicator2.current, {
+      ...settings,
+      duration: 1
+    })
+  }
+  
+  useEffect(() => {
+    animate()
+    window.addEventListener('resize', animate)
+    
+    return (() => {
+      window.removeEventListener('resize', animate)
+    })    
+  }, [active])
+  
+  return (
+    <div
+      ref={$root}
+      className="menu"
+    >
+      {items.map((item, index) => (
+        <a
+          key={item.name}
+          ref={$items.current[index]}
+          className={`item ${active === index ? 'active' : ''}`}
+          onMouseEnter={() => {
+            setActive(index)
+          }}
+          href={item.href}
+         >
+          {item.name}
+        </a>
+      ))}
+      <div
+        ref={$indicator1}
+        className="indicator"
+       />
+      <div
+        ref={$indicator2}
+        className="indicator"
+       />
+    </div>
+  )
+}
+
+
+
+
+
 
   return (
-    <div className="menu-container" ref={container}>
-      <div className="menu-bar">
-        <div className="menu-logo">
-          <Link href="/">HUMAN | NOTHUMAN</Link>
-        </div>
-        <div className="menu-open" onClick={toggleMenu}>
-          <p>Menu</p>
-        </div>
-      </div>
-
-      <div className="menu-overlay">
-        <div className="menu-overlay-bar">
-          <div className="menu-logo">
-            <Link href="/">HUMAN | NOTHUMAN</Link>
-          </div>
-          <div className="menu-close" onClick={toggleMenu}>
-            <p>Close</p>
-          </div>
-        </div>
-
-        <div className="menu-close-icon" onClick={toggleMenu}>
-          <p>&#x2715;</p>
-        </div>
-        <div className="menu-copy">
-          <div className="menu-links">
-            {menuLinks.map((link, index) => (
-              <div key={index} className="menu-link-item">
-                <div className="menu-link-item-holder" onClick={toggleMenu}>
-                  <Link className="menu-link" href={link.path}>
-                    {link.label}
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="menu-info">
-            <div className="menu-info-col">
-              <a href="#">X &#8599;</a>
-              <a href="#">Instagram &#8599;</a>
-              <a href="#">LinkedIn &#8599;</a>
-            </div>
-            <div className="menu-info-col">
-              <p>info@humannothuman.ai</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="App">
+      <Menu items={items} />
     </div>
   );
-};
+export default View
 
-export default Menu;
+
