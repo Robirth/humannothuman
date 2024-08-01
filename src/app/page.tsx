@@ -32,7 +32,7 @@ export default function Home() {
         ></script>
       </Head>
       <a href="/test" className="button">Read more</a>
-      <div className="fixed">
+      <div className="fixed relative">
         {/* Desktop Video */}
         <video
           ref={videoRef}
