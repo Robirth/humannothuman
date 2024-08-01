@@ -12,6 +12,8 @@ export default function Home() {
     if (videoRef.current) {
       videoRef.current.play().then(() => {
         setIsPlaying(true);
+        // Hide the poster image
+        videoRef.current?.setAttribute('poster', '');
       }).catch((error) => {
         console.error('Error playing video:', error);
       });
@@ -61,7 +63,7 @@ export default function Home() {
           poster="https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F2537612138fc4492a3b2a70480a21173"
           autoPlay={false}
           muted={false}
-          controls={false}
+          controls={true}
           playsInline={true}
           loop={false}
           src="https://cdn.builder.io/o/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F8e0a95ddafc340cab10b589c9272608f%2Fcompressed?apiKey=cfdade1741a141b6a543d6f07cefe0a0&token=8e0a95ddafc340cab10b589c9272608f&alt=media&optimized=true"
