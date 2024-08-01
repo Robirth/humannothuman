@@ -74,7 +74,7 @@ a.button::after {
  
 
   .custom-play-button {
-    display: none; /* Hide custom play button on mobile */
+    display: none!important; /* Hide custom play button on mobile */
   }
 }
 .custom-play-button {
