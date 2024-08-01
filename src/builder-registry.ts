@@ -1,6 +1,6 @@
 "use client";
 import { Builder } from "@builder.io/react";
-import BotPage from "./components/Bots/BotPage";
+
 import Charts from "./components/Charts/Charts";
 import Counter from "./components/Counter/Counter";
 import Menu from "./components/Menu/Menu";
@@ -19,13 +19,9 @@ Builder.registerComponent(Counter, {
   ],
 });
 
-Builder.registerComponent(BotPage, {
-  name: "BotPage",
-});
 
-Builder.registerComponent(ThreeScene, {
-  name: "ThreeScene",
-});
+
+
 
 Builder.registerComponent(Menu, {
   name: "Menu",
