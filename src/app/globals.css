@@ -84,13 +84,13 @@ a.button::after {
   color: black;
 }
 /* Tablet and Desktop */
-@media (min-width: 640px) {
+@media (max-width: 640px) {
   a.button {
-    bottom: 120px;
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Offset to truly center the button */
-    max-width: 150px; /* Adjust max width for tablet and desktop */
-    padding: 8px 16px; /* Adjust padding for smaller button */
+    position: relative; /* Ensure button stays relative */
+    display: block; /* Ensure block display */
+    margin: 0 auto; /* Center horizontally */
+    max-width: 80%; /* Adjust max width for smaller screens */
+    padding: 12px 20px; /* Adjust padding as needed */
   }
 }
 
