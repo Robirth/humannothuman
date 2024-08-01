@@ -1,15 +1,21 @@
+"use client";
 import * as React from "react";
 import { useRef, useState } from "react";
 import Head from 'next/head';
 
 
 export default function Home() {
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null); // Specify the type of useRef
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = () => {
-    videoRef.current.play();
-    setIsPlaying(true);
+    if (videoRef.current) {
+      videoRef.current.play().then(() => {
+        setIsPlaying(true);
+      }).catch((error) => {
+        console.error('Error playing video:', error);
+      });
+    }
   };
 
   return (
