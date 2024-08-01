@@ -64,22 +64,17 @@ a.button::after {
 }
 /* Ensure the desktop video is hidden on mobile and vice versa */
 @media (min-width: 640px) {
-  .mobile-video {
-    display: none; /* Hide mobile video on screens larger than 640px */
-  }
-
-  .desktop-video {
-    display: block; /* Show desktop video on screens larger than 640px */
+  
+  .custom-play-button {
+    display: flex; /* Show custom play button on desktop */
   }
 }
 
 @media (max-width: 639px) {
-  .mobile-video {
-    display: block; /* Show mobile video on screens 639px and smaller */
-  }
+ 
 
-  .desktop-video {
-    display: none; /* Hide desktop video on screens 639px and smaller */
+  .custom-play-button {
+    display: none; /* Hide custom play button on mobile */
   }
 }
 .custom-play-button {
