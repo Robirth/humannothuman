@@ -79,9 +79,11 @@ const Slider = () => {
             <h2>ConcentricLife</h2>
            
             <div className="more">
+            <a href="/chx">
               <button>
                 <i className="fa-solid fa-play"></i> See More
               </button>
+              </a>
             </div>
           </div>
         </div>
@@ -92,12 +94,14 @@ const Slider = () => {
           </figure>
           <div className="content">
          
-            <h2>New York Times</h2>
+            <h2>The New York Times</h2>
            
             <div className="more">
+            <a href="/nyt">
               <button>
                 <i className="fa-solid fa-play"></i> See More
               </button>
+              </a>
             </div>
           </div>
         </div>
@@ -110,9 +114,11 @@ const Slider = () => {
             <h2>Victoria's Secret</h2>
            
             <div className="more">
+            <a href="/vs">
               <button>
                 <i className="fa-solid fa-play"></i> See More
               </button>
+              </a>
             </div>
           </div>
         </div>
@@ -125,9 +131,11 @@ const Slider = () => {
             <h2>Neuberger Berman</h2>
             
             <div className="more">
+            <a href="/nb">
               <button>
                 <i className="fa-solid fa-play"></i> See More
               </button>
+              </a>
             </div>
           </div>
         </div>
@@ -140,9 +148,11 @@ const Slider = () => {
             <h2>Merton D. Simpson Gallery</h2>
             
             <div className="more">
+            <a href="/mds">
               <button>
                 <i className="fa-solid fa-play"></i> See More
               </button>
+              </a>
             </div>
           </div>
         </div>
