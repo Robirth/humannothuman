@@ -112,7 +112,7 @@ body{
                         }
                     }
                 }
-                .more {
+                & .more {
                     display: grid;
                     grid-template-columns: repeat(1, 120px);
                     gap: 20px;
