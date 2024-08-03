@@ -18,7 +18,7 @@ export default function Home() {
 </script>
     
       </Head>
-      <a href="/test" className="button">Read more</a>
+      <a href="/test" className="button">Enter</a>
       <div className="fixed">
         {/* Desktop Video */}
         <video
