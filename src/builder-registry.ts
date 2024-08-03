@@ -7,6 +7,7 @@ import Menu from "./components/Menu/Menu";
 import NewMenu from "./components/NewMenu/NewMenu";
 import Next from "./components/Next/Next";
 import Slider from "./components/Slider/Slider";
+import AnimatedFlexCards from "./components/AnimatedFlexCards/AnimatedFlexCards";
 
 
 Builder.registerComponent(Counter, {
@@ -41,4 +42,7 @@ Builder.registerComponent(Charts, {
 
 Builder.registerComponent(Slider, {
   name: "Slider",
+});
+Builder.registerComponent(AnimatedFlexCards, {
+  name: "AnimatedFlexCards",
 });
