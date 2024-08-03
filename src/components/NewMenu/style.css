@@ -2,11 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roslindale+Display+Condensed:wght@400;500&display=swap');
 
 /* Define root variables */
-:root {
-  --bg: #e5e3dc;
-  --link-color: #e2e2dc;
-  --overlay-bg: #0a0a0a;
-}
 
 /* Reset */
 * {
