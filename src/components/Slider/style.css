@@ -91,7 +91,7 @@ body {
                     flex-direction: column;
                     justify-content: center;
                     align-items: end;
-                    gap: 20px;
+                    gap: 155px;
 
                     .category {
                         font-weight: 500;
