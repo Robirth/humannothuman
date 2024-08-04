@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./AnimatedFlexCards.module.css"; // Importing the CSS module
+import styles from "./AnimatedFlexCards.module.css";
 
 const AnimatedFlexCards = () => {
   return (
