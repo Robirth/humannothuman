@@ -7,7 +7,8 @@ export default function Home() {
     <div className="box-border flex relative flex-col shrink-0 w-full min-h-[20px] min-w-[20px]">
       <Head>
         
-<script
+
+  <script
     type="module"
     src="https://agent.d-id.com/v1/index.js"
     data-name="did-agent"
@@ -16,6 +17,7 @@ export default function Home() {
     data-agent-id="agt_3yZn9XkE"
     data-monitor="true">
 </script>
+    
     
       </Head>
       <a href="/test" className="button">Enter</a>
