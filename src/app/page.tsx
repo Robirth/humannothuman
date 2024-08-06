@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         
 
-  <script
+      <script
     type="module"
     src="https://agent.d-id.com/v1/index.js"
     data-name="did-agent"
