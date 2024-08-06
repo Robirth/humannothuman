@@ -8,15 +8,17 @@ export default function Home() {
       <Head>
         
 
-      <script
+ 
+<script
     type="module"
     src="https://agent.d-id.com/v1/index.js"
     data-name="did-agent"
     data-mode="fabio"
     data-client-key="Z29vZ2xlLW9hdXRoMnwxMTA0MTc1NDA1OTYyMTk4NjMxMTI6eDBVbko4SnRQNWNtTzB0SURpWnRs"
-    data-agent-id="agt_3yZn9XkE"
+    data-agent-id="agt_jF9PSC1p"
     data-monitor="true">
 </script>
+    
     
     
       </Head>
