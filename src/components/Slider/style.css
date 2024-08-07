@@ -238,7 +238,7 @@ body {
 
         .indicators {
             position: absolute;
-            top: 62%;
+            top: 55%;
             height: var(--w-column);
             width: min(1200px, 90vw);
             left: 50%;
