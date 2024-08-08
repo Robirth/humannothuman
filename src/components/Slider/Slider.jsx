@@ -145,7 +145,7 @@ const Slider = () => {
           </figure>
           <div className="content">
            
-            <h2>Merton D. Simpson Gallery</h2>
+            <h2>Merton D Simpson Gallery</h2>
             
             <div className="more">
             <a href="/mds">
