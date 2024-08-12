@@ -18,10 +18,7 @@ export default function Home() {
     data-agent-id="agt_jF9PSC1p"
     data-monitor="true">
 </script>
-    
-    
-    
-      </Head>
+     </Head>
       <a href="/test" className="button">Enter</a>
       <div className="fixed">
         {/* Desktop Video */}
@@ -33,7 +30,7 @@ export default function Home() {
           controls={true}
           playsInline={true}
           loop={false}
-          src="https://cdn.builder.io/o/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F35892a6997a64b16a6422202b6b979c9%2Fcompressed?apiKey=cfdade1741a141b6a543d6f07cefe0a0&token=35892a6997a64b16a6422202b6b979c9&alt=media&optimized=true"
+          src="https://cdn.builder.io/o/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F8761f23b2ec5445690bd32bbe85744ef%2Fcompressed?apiKey=cfdade1741a141b6a543d6f07cefe0a0&token=8761f23b2ec5445690bd32bbe85744ef&alt=media&optimized=true"
         />
 
         {/* Mobile Video */}
