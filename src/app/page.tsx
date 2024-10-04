@@ -27,7 +27,7 @@ export default function Home() {
           controls={true}
           playsInline={true}
           loop={false}
-          src="https://cdn.builder.io/o/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F8761f23b2ec5445690bd32bbe85744ef%2Fcompressed?apiKey=cfdade1741a141b6a543d6f07cefe0a0&token=8761f23b2ec5445690bd32bbe85744ef&alt=media&optimized=true"
+          src="https://cdn.builder.io/o/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2Faed9fa8ffcdb464b99580b080d55f832%2Fcompressed?apiKey=cfdade1741a141b6a543d6f07cefe0a0&token=aed9fa8ffcdb464b99580b080d55f832&alt=media&optimized=true"
         />
 
         {/* Mobile Video */}
