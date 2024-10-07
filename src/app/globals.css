@@ -112,7 +112,7 @@ a.button::after {
 /* Tablet and Desktop */
 @media (min-width: 640px) {
   a.button {
-    bottom: 120px;
+    bottom: 75px;
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Offset to truly center the button */
     max-width: 150px; /* Adjust max width for tablet and desktop */
