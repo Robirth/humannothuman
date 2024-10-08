@@ -22,7 +22,7 @@ export default function Home() {
         <video
           className="hidden md:block box-border object-cover fixed flex-col shrink-0 min-h-[20px] min-w-[20px] w-full h-full"
           autoPlay={false}
-          poster="https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F0a957f1388a84c5180c805ae7e8c05d8"
+          poster="https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2Fbe75cc84e953446f8c74b8f1c2b20290"
           muted={false}
           controls={true}
           playsInline={true}
