@@ -1,16 +1,16 @@
 "use client";
 
 import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link'; // Import Link from Next.js
-import Head from 'next/head'; // Import Head from Next.js
+import Link from 'next/link';
+import Head from 'next/head';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 
 export default function VideoHero() {
   const [isMobile, setIsMobile] = useState(false);
   const [videoError, setVideoError] = useState(false);
+  const [isTextVisible, setIsTextVisible] = useState(true);
 
-  // Define refs with HTMLVideoElement type
   const desktopVideoRef = useRef<HTMLVideoElement>(null);
   const mobileVideoRef = useRef<HTMLVideoElement>(null);
 
@@ -28,12 +28,13 @@ export default function VideoHero() {
   const desktopVideo = "https://cdn.builder.io/o/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2Faed9fa8ffcdb464b99580b080d55f832%2Fcompressed?apiKey=cfdade1741a141b6a543d6f07cefe0a0&token=aed9fa8ffcdb464b99580b080d55f832&alt=media&optimized=true";
   const mobileVideo = "https://cdn.builder.io/o/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F8e0a95ddafc340cab10b589c9272608f%2Fcompressed?apiKey=cfdade1741a141b6a543d6f07cefe0a0&token=8e0a95ddafc340cab10b589c9272608f&alt=media&optimized=true";
 
-  // Function to play the video when "Get Started" is clicked
   const handlePlayVideo = () => {
     if (isMobile && mobileVideoRef.current) {
       mobileVideoRef.current.play();
+      setIsTextVisible(false);
     } else if (!isMobile && desktopVideoRef.current) {
       desktopVideoRef.current.play();
+      // No text fade on desktop
     }
   };
 
@@ -86,13 +87,18 @@ export default function VideoHero() {
           <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col justify-center h-full">
               <div className="max-w-2xl">
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
-                  Human | Not Human </h1>
-                <h1 className="text-4xl md:text-6xl font-bold text-white mt-4 leading-tight"> Robert A Hinds</h1>
-                
-                <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
-                  Robert is an experienced multimedia artist with a rich background in web development, design, and motion graphics.
-                </p>
+                <div className={`transition-opacity duration-500 ${!isTextVisible && isMobile ? 'opacity-0' : 'opacity-100'}`}>
+                  <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+                    Human | Not Human
+                  </h1>
+                  <h1 className="text-4xl md:text-6xl font-bold text-white mt-4 leading-tight">
+                    Robert A Hinds
+                  </h1>
+                  
+                  <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+                    Robert is an experienced multimedia artist with a rich background in web development, design, and motion graphics.
+                  </p>
+                </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" variant="outline" className="w-full sm:w-auto text-black border-white hover:bg-white/10" onClick={handlePlayVideo}>
@@ -106,7 +112,6 @@ export default function VideoHero() {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
-                  
                 </div>
               </div>
             </div>
