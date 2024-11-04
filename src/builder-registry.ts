@@ -7,6 +7,8 @@ import Menu from "./components/Menu/Menu";
 import NewMenu from "./components/NewMenu/NewMenu";
 import Next from "./components/Next/Next";
 import Slider from "./components/Slider/Slider";
+import { VideoCard } from "./components/VideoCard/VideoCard";
+
 
 
 
@@ -42,5 +44,8 @@ Builder.registerComponent(Charts, {
 
 Builder.registerComponent(Slider, {
   name: "Slider",
+});
+Builder.registerComponent(VideoCard, {
+  name: "VideoCard",
 });
 
