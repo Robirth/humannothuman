@@ -3,17 +3,11 @@
 @tailwind base;
 
 @tailwind utilities;
-body {
-  --color-text: #949494;
-  --color-bg: #D4D2C7!important;
-  --color-link: #b78a84;
-  --color-link-hover: #fff;
-  color: #949494;
-  color: var(--color-text);
-  background-color: #0e0e0f;
-  background-color: var(--color-bg);
-  font-family: Helvetica, Arial, sans-serif;
+.bg-custom-background {
+  background-color: #D4D2C7; /* Replace with your desired color */
 }
+
+
 #app {
   width: 100vw;
   height: 100vh;
