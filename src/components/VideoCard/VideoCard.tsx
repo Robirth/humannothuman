@@ -7,12 +7,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 interface VideoCardProps {
-  id: string;
-  title: string;
-  thumbnail: string;
-  duration: string;
-  description: string;
-}
+    id: string;
+    title: string;
+    thumbnail: string;
+    duration: string;
+    description: string;
+  }
 
 export function VideoCard({ id, title, thumbnail, duration, description }: VideoCardProps) {
   return (

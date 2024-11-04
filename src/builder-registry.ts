@@ -7,7 +7,7 @@ import Menu from "./components/Menu/Menu";
 import NewMenu from "./components/NewMenu/NewMenu";
 import Next from "./components/Next/Next";
 import Slider from "./components/Slider/Slider";
-import { VideoCard } from "./components/VideoCard/VideoCard";
+import VideoCard from "./components/VideoCard/Vid";
 
 
 
@@ -46,6 +46,6 @@ Builder.registerComponent(Slider, {
   name: "Slider",
 });
 Builder.registerComponent(VideoCard, {
-  name: "VideoCard",
+  name: "Vid",
 });
 
