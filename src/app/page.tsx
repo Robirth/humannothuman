@@ -52,7 +52,7 @@ export default function VideoHero() {
         ></script>
       </Head>
 
-      <section className="px-6 py-6 md:p-8">
+      <section className="px-6 py-6 md:p-8 my-8">
         <div className="relative w-full h-[85vh] overflow-hidden rounded-[2.5rem] bg-black">
           {!videoError && (
             <>
