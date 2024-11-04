@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, Instagram, Linkedin } from "lucide-react";
 
 export default function VideoHero() {
   const [isMobile, setIsMobile] = useState(false);
@@ -118,6 +118,14 @@ export default function VideoHero() {
           </div>
           
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/50 to-transparent"></div>
+          <div className="absolute bottom-8 right-8 flex space-x-4">
+            <Link href="https://www.instagram.com/">
+              <Instagram className="w-6 h-6 text-white hover:text-gray-300" />
+            </Link>
+            <Link href="https://www.linkedin.com/">
+              <Linkedin className="w-6 h-6 text-white hover:text-gray-300" />
+            </Link>
+          </div>
         </div>
       </section>
     </>
