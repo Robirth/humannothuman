@@ -46,4 +46,7 @@ Builder.registerComponent(Charts, {
 Builder.registerComponent(Slider, {
   name: "Slider",
 });
+Builder.registerComponent(VideoCard, {
+  name: "VideoCard",
+});
 
