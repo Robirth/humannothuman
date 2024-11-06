@@ -7,7 +7,7 @@ const videos = [
   {
     id: "1",
     title: "Getting Started with Web Development",
-    thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format&fit=crop&q=60",
+    thumbnail: "https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F99f0f6cd43b04c818a8276c512c7d07f?w=800&auto=format&fit=crop&q=60",
     duration: "12:34",
     description: "Learn the fundamentals of web development in this comprehensive guide.",
     views: "1.2K"
@@ -15,7 +15,7 @@ const videos = [
   {
     id: "2",
     title: "Advanced React Patterns",
-    thumbnail: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=60",
+    thumbnail: "https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F99f0f6cd43b04c818a8276c512c7d07f?w=800&auto=format&fit=crop&q=60",
     duration: "15:45",
     description: "Master advanced React patterns and improve your application architecture.",
     views: "856"
@@ -23,7 +23,7 @@ const videos = [
   {
     id: "3",
     title: "Building Modern UIs",
-    thumbnail: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=800&auto=format&fit=crop&q=60",
+    thumbnail: "https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F99f0f6cd43b04c818a8276c512c7d07f?w=800&auto=format&fit=crop&q=60",
     duration: "20:18",
     description: "Create beautiful and responsive user interfaces with modern techniques.",
     views: "2.1K"
@@ -31,7 +31,7 @@ const videos = [
   {
     id: "4",
     title: "State Management Deep Dive",
-    thumbnail: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&auto=format&fit=crop&q=60",
+    thumbnail: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&auto=format&fit=crop&q=6https://cdn.builder.io/api/v1/image/assets%2Fcfdade1741a141b6a543d6f07cefe0a0%2F99f0f6cd43b04c818a8276c512c7d07f?w=800&auto=format&fit=crop&q=60s",
     duration: "18:22",
     description: "Explore different state management solutions for React applications.",
     views: "1.5K"

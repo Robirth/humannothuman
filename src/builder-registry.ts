@@ -12,6 +12,7 @@ import VideoCard from "./components/VideoCard/VideoCard";
 
 
 
+
 Builder.registerComponent(Counter, {
   name: "Counter",
   inputs: [
@@ -44,8 +45,5 @@ Builder.registerComponent(Charts, {
 
 Builder.registerComponent(Slider, {
   name: "Slider",
-});
-Builder.registerComponent(VideoCard, {
-  name: "VideoCard",
 });
 
