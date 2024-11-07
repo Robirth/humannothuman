@@ -23,6 +23,7 @@ export function VideoCard({ id, title, thumbnail, duration, description }: Video
             src={thumbnail}
             alt={title}
             fill
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100">
