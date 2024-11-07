@@ -19,8 +19,8 @@ export function VideoCard({ id, title, thumbnail, duration, description }: Video
     <Card className="group overflow-hidden rounded-lg transition-all hover:shadow-lg">
       <Link href={`/videos/${id}`}>
         <div className="relative w-full aspect-video">
-          {/* Ensure the parent div has a defined aspect ratio */}
-          <div className="relative w-full h-full">
+          {/* Ensure the parent div has both width and height set correctly */}
+          <div className="relative w-full h-60"> {/* Set a fixed height, e.g., h-60 */}
             <Image
               src={thumbnail}
               alt={title}
