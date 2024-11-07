@@ -41,5 +41,3 @@ Builder.registerComponent(Slider, {
 Builder.registerComponent(VideoCard, {
   name: "VideoCard",
 });
-
-
