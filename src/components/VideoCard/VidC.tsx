@@ -22,7 +22,9 @@ export function VideoCard({ id, title, thumbnail, duration, description }: Video
           <Image
             src={thumbnail}
             alt={title}
-            fill
+            layout="responsive"
+            width={800}   // Adjust based on your desired display size
+            height={450}  // Adjust based on your desired display size
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
