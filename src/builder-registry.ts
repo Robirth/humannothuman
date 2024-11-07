@@ -1,5 +1,5 @@
 "use client";
-import { Builder, withChildren } from "@builder.io/react";
+import { Builder } from "@builder.io/react";
 import Charts from "./components/Charts/Charts";
 import Counter from "./components/Counter/Counter";
 import Menu from "./components/Menu/Menu";
@@ -38,37 +38,8 @@ Builder.registerComponent(Slider, {
   name: "Slider",
 });
 
-Builder.registerComponent(withChildren(VideoCard), {
+Builder.registerComponent(VideoCard, {
   name: "VideoCard",
 });
 
-Builder.registerComponent(VideoCard, {
-  name: "VideoCard",
-  inputs: [
-    {
-      name: "description",
-      type: "string",
-      required: true,
-    },
-    {
-      name: "duration",
-      type: "string",
-      required: true,
-    },
-    {
-      name: "id",
-      type: "string",
-      required: true,
-    },
-    {
-      name: "thumbnail",
-      type: "string",
-      required: true,
-    },
-    {
-      name: "title",
-      type: "string",
-      required: true,
-    },
-  ],
-});
+
