@@ -18,16 +18,15 @@ export function VideoCard({ id, title, thumbnail, duration, description }: Video
   return (
     <Card className="group overflow-hidden rounded-lg transition-all hover:shadow-lg">
       <Link href={`/videos/${id}`}>
-      <div className="relative h-48 overflow-hidden">
-          <Image
-            src={thumbnail}
-            alt={title}
-            layout="responsive"
-            width={800}   // Adjust based on your desired display size
-            height={450}  // Adjust based on your desired display size
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-          />
+      <div className="relative w-full aspect-video">
+  <Image
+    src={thumbnail}
+    alt={title}
+    fill
+    sizes="(max-width: 768px) 100vw, 50vw"
+    className="object-cover transition-transform duration-300 group-hover:scale-105"
+  />
+</div>
           <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100">
             <div className="absolute inset-0 flex items-center justify-center">
               <Play className="h-12 w-12 text-white" />
