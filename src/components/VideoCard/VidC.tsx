@@ -19,17 +19,17 @@ export function VideoCard({ id, title, thumbnail, duration, description }: Video
     <Card className="group overflow-hidden rounded-lg transition-all hover:shadow-lg">
       <Link href={`/videos/${id}`}>
       
-        <div style={{ position: 'absolute', width: '100%', height: '400px' }}>
-          <Image
-            src={thumbnail}
-            alt={title}
-            width={800}  // Specify width
-            height={400} // Specify height
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            style={{ objectFit: "cover" }}
-            className="transition-transform duration-300 group-hover:scale-105"
-          />
-  
+      <div className="relative w-full aspect-video">
+          {/* Ensure the parent div has a defined aspect ratio */}
+          <div className="relative w-full h-full">
+            <Image
+              src={thumbnail}
+              alt={title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
           <div className="absolute inset-0 flex flex-col justify-between p-4">
             <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100 flex items-center justify-center">
               <Play className="h-12 w-12 text-white" />
