@@ -18,7 +18,7 @@ export function VideoCard({ id, title, thumbnail, duration, description }: Video
   return (
     <Card className="group overflow-hidden rounded-lg transition-all hover:shadow-lg">
       <Link href={`/videos/${id}`}>
-      <div className="relative w-full h-400px">
+      
         <div style={{ position: 'absolute', width: '100%', height: '400px' }}>
           <Image
             src={thumbnail}
@@ -29,7 +29,7 @@ export function VideoCard({ id, title, thumbnail, duration, description }: Video
             style={{ objectFit: "cover" }}
             className="transition-transform duration-300 group-hover:scale-105"
           />
-          </div>
+  
           <div className="absolute inset-0 flex flex-col justify-between p-4">
             <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100 flex items-center justify-center">
               <Play className="h-12 w-12 text-white" />
