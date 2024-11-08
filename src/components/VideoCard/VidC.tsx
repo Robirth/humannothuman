@@ -18,7 +18,7 @@ export function VideoCard({ id, title, thumbnail, duration, description }: Video
   return (
     <Card className="group overflow-hidden rounded-lg transition-all hover:shadow-lg">
       <Link href={`/videos/${id}`}>
-        <div style={{ position: 'relative', width: '100%', height: '400px' }}>
+        <div style={{ position: 'absolute', width: '100%', height: '400px' }}>
           <Image
             src={thumbnail}
             alt={title}
