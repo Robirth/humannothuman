@@ -18,11 +18,12 @@ export function VideoCard({ id, title, thumbnail, duration, description }: Video
   return (
     <Card className="group overflow-hidden rounded-lg transition-all hover:shadow-lg">
       <Link href={`/videos/${id}`}>
-        <div className="relative aspect-video w-full">
+      <div style={{ position: 'relative', width: '100%', height: '400px' }}>
           <Image
             src={thumbnail}
             alt={title}
             fill // Enables Image to fill the container
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             style={{ objectFit: "cover" }} // Replaces objectFit prop with style
             className="transition-transform duration-300 group-hover:scale-105"
           />
