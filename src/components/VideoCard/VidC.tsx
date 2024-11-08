@@ -18,26 +18,16 @@ export function VideoCard({ id, title, thumbnail, duration, description }: Video
   return (
     <Card className="group overflow-hidden rounded-lg transition-all hover:shadow-lg">
       <Link href={`/videos/${id}`}>
-      <div style={{ position: 'relative', width: '100%', height: '400px' }}>
+        <div style={{ position: 'relative', width: '100%', height: '400px' }}>
           <Image
             src={thumbnail}
             alt={title}
-            fill // Enables Image to fill the container
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            style={{ objectFit: "cover" }} // Replaces objectFit prop with style
-            className="transition-transform duration-300 group-hover:scale-105"
-          /><div style={{ position: 'relative', width: '100%', height: '400px' }}>
-          <Image
-            src={thumbnail}
-            alt={title}
-            layout="responsive"
-            width={800}  // Example width
-            height={400} // Example height
+            width={800}  // Specify width
+            height={400} // Specify height
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             style={{ objectFit: "cover" }}
             className="transition-transform duration-300 group-hover:scale-105"
           />
-        </div>
           <div className="absolute inset-0 flex flex-col justify-between p-4">
             <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100 flex items-center justify-center">
               <Play className="h-12 w-12 text-white" />
